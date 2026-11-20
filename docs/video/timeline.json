@@ -1,0 +1,23 @@
+{
+  "audio": "docs/i like vo2.mp3",
+  "duration": 264.9,
+  "note": "Times from faster-whisper (small, tl) word timestamps; transcript.json has the raw output (spellings are rough, timings are good). Verify by ear at cuts.",
+  "beats": [
+    {"id": "1a", "name": "Hook: deadline panic",        "start": 0.0,   "end": 17.0,  "vo": "11 na ng gabi ... sa laki ng gastos"},
+    {"id": "1b", "name": "Hook: 'Been there'",           "start": 17.5,  "end": 19.5,  "vo": "Been there, done that"},
+    {"id": "1c", "name": "Hook: Facebook group ghosting","start": 19.9,  "end": 41.5,  "vo": "Facebook group, tag-tag, ghoster, walang review"},
+    {"id": "1d", "name": "Hook: MERON beat drop",        "start": 41.9,  "end": 46.5,  "vo": "Akala mo lang wala! PERO MERON x3"},
+    {"id": "2",  "name": "Reveal",                       "start": 46.8,  "end": 58.8,  "vo": "Paano kung ... Ito ang Campus Gigs ... para sa estudyante ng SLSU"},
+    {"id": "3a", "name": "Home + 6 categories",          "start": 59.4,  "end": 76.7,  "vo": "homepage, malinis, anim na categories", "cues": {"69.4": "Design & Creative", "70.5": "Tech & Development", "72.5": "Writing & Editing", "74.5": "Tutoring", "75.5": "Admin Support / Others"}},
+    {"id": "3b", "name": "Search + sort",                "start": 77.1,  "end": 86.0,  "vo": "magtype sa search bar; rating, mura, bilis, isang pindot", "cues": {"77.1": "typing in search [keyboard typing]", "80.4": "Top Rated", "82.1": "Price low to high"}},
+    {"id": "3c", "name": "Verified + gig/seller page",   "start": 86.4,  "end": 111.4, "vo": "beripikado, hindi estranghero, portfolio, araw, review", "cues": {"88.2": "verified badge", "102.8": "portfolio", "106.2": "delivery days", "107.8": "reviews"}},
+    {"id": "3d", "name": "Chat + order + tracking + meet-up pay + review", "start": 111.4, "end": 142.3, "vo": "kausapin, mag-order, subaybayan, bayad sa meet-up, review", "cues": {"113.7": "messages", "117.2": "order form", "122.6": "order status", "129.0": "Pay on meet-up", "137.3": "Leave a review"}},
+    {"id": "4",  "name": "Seller: Post Gig + live preview", "start": 142.6, "end": 176.0, "vo": "At ikaw Pay-Yuyan ... title, category, description, skills, Basic/Standard/Pro, live preview", "cues": {"151.4": "Post Gig page", "157.2": "category/description/skills", "163.4": "tiers", "167.0": "typing + live preview [keyboard typing]", "173.2": "Wala ng hulaan"}},
+    {"id": "5a", "name": "Compare vs Facebook",          "start": 176.4, "end": 189.8, "vo": "Kumpara sa Facebook groups ... lahat nasa iisang lugar", "cues": {"179.4": "Verified", "182.0": "Order tracking / rating", "185.1": "meet-up pay"}},
+    {"id": "5b", "name": "Stats counters",               "start": 190.3, "end": 210.0, "vo": "455+, 4.8, 9 of 10, isang araw [crowd cheering @207.9]"},
+    {"id": "6",  "name": "Pricing",                      "start": 210.2, "end": 231.0, "vo": "Libre; Campus Plus 99; Pro Seller 149", "cues": {"212.5": "Basic free", "219.0": "Campus Plus", "223.8": "Pro Seller"}},
+    {"id": "7a", "name": "Community close",              "start": 231.4, "end": 247.5, "vo": "hindi lang website, komunidad, nasa tabi mo lang"},
+    {"id": "7b", "name": "Tagline end card",             "start": 247.8, "end": 257.0, "vo": "Campus Gigs! ... WALANG TAMAD! [applause]"},
+    {"id": "7c", "name": "Thanks + demo disclaimer",     "start": 256.8, "end": 264.9, "vo": "Maraming salamat po. Demo lang ang lahat ng presyo."}
+  ]
+}

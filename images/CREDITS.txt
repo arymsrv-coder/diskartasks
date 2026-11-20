@@ -1,0 +1,180 @@
+PHOTO CREDITS: Campus Gigs
+
+All photos on the site were supplied by the project owner (eleven source pictures, used with permission for this
+project). Each file below is a crop or resize of one of those pictures; the people shown are not the (fictional)
+sellers and buyers named on the pages.
+
+Files
+-----
+
+about-1.jpg
+    Used for : A designer’s wooden desk with a laptop showing logo work, a sketchbook and a mug.
+    Source   : project owner
+
+about-2.jpg
+    Used for : A laptop screen full of code on a dark wooden desk.
+    Source   : project owner
+
+about-3.jpg
+    Used for : A brand identity guidelines flat lay with colour swatches and a tablet.
+    Source   : project owner
+
+about-4.jpg
+    Used for : A smiling student in a navy polo shirt in a bright, plant-filled study hall.
+    Source   : project owner
+
+banner.jpg
+    Used for : Code on a laptop screen resting on a dark wooden desk.
+    Source   : project owner
+
+campus.jpg
+    Used for : The Southern Luzon State University main building on a sunny day.
+    Source   : project owner
+
+campus-2.jpg
+    Used for : Campus buildings and lawn glowing in golden evening light.
+    Source   : project owner
+
+campus-3.jpg
+    Used for : Students walking along a tree-lined campus path beside a long white building.
+    Source   : project owner
+
+contact.jpg
+    Used for : A friendly student with long dark hair smiles at the camera.
+    Source   : project owner
+
+gig-01.jpg
+    Used for : A laptop screen showing logo design work in editing software.
+    Source   : project owner
+
+gig-02.jpg
+    Used for : Brand identity guidelines printed on papers with a colour palette and a tablet.
+    Source   : project owner
+
+gig-03.jpg
+    Used for : Code on a laptop screen in a dark editor.
+    Source   : project owner
+
+gig-04.jpg
+    Used for : A smiling student works at a laptop in a bright campus study area.
+    Source   : project owner
+
+gig-05.jpg
+    Used for : A laptop keyboard and screen with code beside a notebook.
+    Source   : project owner
+
+gig-06.jpg
+    Used for : A student writes in a notebook beside an open book on a campus table.
+    Source   : project owner
+
+gig-07.jpg
+    Used for : An open sketchbook with logo ideas next to a mug and a plant.
+    Source   : project owner
+
+gig-08.jpg
+    Used for : A tablet showing brand identity guidelines on printed colour palette sheets.
+    Source   : project owner
+
+gig-09.jpg
+    Used for : A close view of web code in a dark editor.
+    Source   : project owner
+
+gig-10.jpg
+    Used for : Lines of script code on a dark laptop screen.
+    Source   : project owner
+
+gig-11.jpg
+    Used for : An open book with highlighters and a hand writing notes on a wooden table.
+    Source   : project owner
+
+gig-12.jpg
+    Used for : A student typing on a laptop with a phone and water bottle on the table.
+    Source   : project owner
+
+gig-13.jpg
+    Used for : A student writing in a notebook at an outdoor table with books.
+    Source   : project owner
+
+gig-14.jpg
+    Used for : A smiling student with long dark hair in a sunlit study hall.
+    Source   : project owner
+
+gig-15.jpg
+    Used for : A smiling student in a navy polo shirt ready to help.
+    Source   : project owner
+
+gig-16.jpg
+    Used for : Hands typing on a silver laptop at a white desk.
+    Source   : project owner
+
+gig-17.jpg
+    Used for : A sketchbook, mug and plant on a wooden desk by a window.
+    Source   : project owner
+
+gig-18.jpg
+    Used for : A photographer holding a camera on a busy campus walkway.
+    Source   : project owner
+
+hero-1.jpg
+    Used for : A smiling student works on a laptop at a bright campus study area.
+    Source   : project owner
+
+hero-2.jpg
+    Used for : A smiling student in a navy polo shirt looks at the camera.
+    Source   : project owner
+
+hero-3.jpg
+    Used for : A student photographs the campus with a camera among trees and walkways.
+    Source   : project owner
+
+hero-4.jpg
+    Used for : A student writes notes at an outdoor campus table with an open textbook.
+    Source   : project owner
+
+work-bea-1.jpg
+    Used for : A brand guidelines page with typography notes on a wooden desk.
+    Source   : project owner
+
+work-bea-2.jpg
+    Used for : Colour palette cards, a camera lens and a marker on a desk.
+    Source   : project owner
+
+work-jaya-1.jpg
+    Used for : A code editor with a project file tree on a laptop screen.
+    Source   : project owner
+
+work-jaya-2.jpg
+    Used for : A laptop and a student working in a busy study area.
+    Source   : project owner
+
+work-ken-1.jpg
+    Used for : A student writing in a notebook next to a thick textbook and water bottle.
+    Source   : project owner
+
+work-mia-1.jpg
+    Used for : Students walking along a long campus path between lawns and buildings.
+    Source   : project owner
+
+work-paolo-1.jpg
+    Used for : Brand guideline sheets spread across a wooden desk.
+    Source   : project owner
+
+work-paolo-2.jpg
+    Used for : A stoneware mug and an open sketchbook beside a window.
+    Source   : project owner
+
+work-paolo-3.jpg
+    Used for : A student photographer aiming a camera outdoors.
+    Source   : project owner
+
+work-paolo-4.jpg
+    Used for : A tablet showing a brand identity presentation cover.
+    Source   : project owner
+
+work-rhea-1.jpg
+    Used for : An open textbook and highlighters on a wooden table.
+    Source   : project owner
+
+work-saye-1.jpg
+    Used for : An open sketchbook filled with hand-drawn logo concepts.
+    Source   : project owner

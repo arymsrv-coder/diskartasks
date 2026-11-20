@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Campus Gigs</title>
+  <meta name="description" content="Campus Gigs pricing for buyers and sellers. Free to start; the plans here are a demo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+
+  <section class="pricing-hero" aria-labelledby="pricing-title">
+    <div class="container">
+      <div class="segmented pricing-toggle" id="audience" role="group" aria-label="Pricing for">
+        <button type="button" data-audience="buyers" aria-pressed="true" class="is-active">Buyers</button>
+        <button type="button" data-audience="sellers" aria-pressed="false">Sellers</button>
+      </div>
+      <h1 id="pricing-title">Simple pricing for campus life</h1>
+      <p class="pricing-hero__sub">Free to get started. Pick a plan only if you want the extras.</p>
+      <p class="pricing-hero__switch"><span id="switch-text"></span> <button class="link-btn" type="button" id="switch-btn"></button></p>
+    </div>
+  </section>
+
+  <section class="container pricing-plans" aria-labelledby="plans-title">
+    <h2 class="sr-only" id="plans-title">Plans</h2>
+    <div class="pricing-grid" id="plans"></div>
+    <p class="hint-note pricing-note">Demo only: no payment is taken on this site.</p>
+  </section>
+
+  <section class="section container" aria-labelledby="features-title">
+    <div id="features"></div>
+  </section>
+
+  <section class="section container">
+    <div class="stat-line" id="stat"></div>
+  </section>
+
+  <section class="section container" aria-labelledby="pfaq-title">
+    <div class="faq-split">
+      <h2 class="h-rule" id="pfaq-title">Frequently Asked Questions</h2>
+      <div class="acc" id="pricing-faq"></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-label="Get started"><div id="pricing-cta"></div></section>
+
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile | Campus Gigs</title>
+  <meta name="description" content="Your orders, favorites and reviews on Campus Gigs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <div class="profile-cover" id="profile-cover" aria-hidden="true"></div>
+  <div class="container">
+    <header class="profile-head" id="profile">
+      <div class="profile-head__avatar" id="p-avatar"></div>
+      <div class="profile-head__id"><h1 id="p-handle"></h1><p id="p-headline"></p></div>
+      <div class="profile-head__actions"><button class="btn btn--outline" type="button" id="p-edit">Profile</button></div>
+    </header>
+
+    <div class="profile-layout">
+      <nav class="profile-nav" aria-label="Account"><ul id="profile-nav"></ul></nav>
+
+      <div class="profile-main">
+        <nav class="tabbar" id="tabbar" aria-label="Profile sections">
+          <a href="#orders" data-section="orders">My Orders</a>
+          <a href="#favorites" data-section="favorites">Favorites</a>
+          <a href="#reviews" data-section="reviews">Reviews</a>
+        </nav>
+
+        <section class="profile-section" id="orders" aria-labelledby="orders-title">
+          <h2 id="orders-title">My Orders</h2>
+          <div class="chip-row" id="order-chips" role="group" aria-label="Filter orders">
+            <button class="chip chip--active" type="button" aria-pressed="true" data-status="">All</button>
+            <button class="chip" type="button" aria-pressed="false" data-status="in_progress">In Progress</button>
+            <button class="chip" type="button" aria-pressed="false" data-status="completed">Completed</button>
+          </div>
+          <div class="order-list" id="order-list"></div>
+        </section>
+
+        <section class="profile-section" id="favorites" aria-labelledby="fav-title">
+          <h2 id="fav-title">Favorites</h2>
+          <div class="fav-grid" id="fav-grid"></div>
+        </section>
+
+        <section class="profile-section" id="reviews" aria-labelledby="rev-title">
+          <div class="section__head"><h2 id="rev-title">Recent Reviews</h2><button class="link-arrow" type="button" id="see-all-reviews" hidden>See all <span id="rev-arrow"></span></button></div>
+          <div id="review-list"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/settings-drawer.js"></script>
+<script src="js/pages/profile.js"></script>
+</body>
+</html>

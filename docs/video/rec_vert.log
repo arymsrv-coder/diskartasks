@@ -1,0 +1,73 @@
+hook done 1.66
+home done 1.82
+buyer done 1.67
+M1 done 1.73
+seller done 1.69
+M2 done 1.75
+Traceback (most recent call last):
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/rec_vert.py", line 137, in <module>
+    elif name == "pricing": pricing_seg(b)
+                            ~~~~~~~~~~~^^^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/rec_vert.py", line 117, in pricing_seg
+    s.at(13.6); pg.evaluate("window.scrollTo({top:0,behavior:'smooth'})"); pg.click("[data-audience=sellers]"); pg.wait_for_timeout(500)
+                                                                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/sync_api/_generated.py", line 16300, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+        )
+        ^
+    )
+    ^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py", line 124, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/page.py", line 1125, in click
+    return await self._main_frame.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/frame.py", line 587, in click
+    return await self._channel.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/channel_owner.py", line 387, in finish
+    raise e from None
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/channel_owner.py", line 352, in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/arymsr.vendiola/Campus Gig/docs/video/.venv/lib/python3.14/site-packages/playwright/_impl/utils/zones.py", line 58, in run_async
+    return await func()
+           ^^^^^^^^^^^^
+playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-audience=sellers]")
+    - locator resolved to <button type="button" aria-pressed="false" data-audience="sellers">Sellers</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="" id="cg-label">Campus Plus · ₱99 / buwan</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="" id="cg-label">Campus Plus · ₱99 / buwan</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="" id="cg-label">Campus Plus · ₱99 / buwan</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+

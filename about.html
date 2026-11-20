@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &amp; Contact | Campus Gigs</title>
+  <meta name="description" content="About Campus Gigs, how it works, answers to common questions, and a form to write to the team at SLSU Main Campus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+
+  <section class="hero-curve about-hero" aria-labelledby="about-title">
+    <svg class="hero-curve__shape" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true"><path fill="#2F5A66" d="M0 0H1440V150C1200 110 1130 470 740 522 460 558 220 482 0 430Z"/></svg>
+    <div class="container hero-curve__inner">
+      <div>
+        <p class="eyebrow">About &amp; contact</p>
+        <h1 id="about-title">Made for campus.<br>Made for <span class="about-hero__accent">each other.</span></h1>
+        <p>Campus Gigs connects SLSU students with peers who offer design, tech, writing and tutoring services.</p>
+        <div class="hero-curve__actions">
+          <a class="btn btn--light" href="browse.html">Browse Gigs</a>
+          <a class="btn btn--outline about-hero__ghost" id="about-seller" href="signup.html?role=seller">Become a Seller</a>
+          <a class="btn btn--outline about-hero__ghost" href="#contact">Contact us</a>
+        </div>
+      </div>
+      <div class="hero-curve__media is-collage">
+        <div class="hero-curve__blob"></div>
+        <div class="collage collage--about" aria-label="Students collaborating on campus">
+          <div class="collage__frame" data-frame="aboutCollage1"></div>
+          <div class="collage__frame" data-frame="aboutCollage2"></div>
+          <div class="collage__frame" data-frame="aboutCollage3"></div>
+          <div class="collage__frame" data-frame="aboutCollage4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container about-two">
+    <div><h2 class="h-rule">Our Story</h2><p>Campus Gigs started with a simple idea: SLSU students have incredible skills, and we wanted a place where they can share them, offer their services and support each other.</p></div>
+    <div><h2 class="h-rule">Our Mission</h2><p>To build a trusted and easy-to-use platform that fosters skill-sharing, collaboration and opportunity for every student on campus.</p></div>
+  </section>
+
+  <section class="section container" id="how" aria-labelledby="how-title">
+    <h2 class="h-rule h-rule--center" id="how-title" style="text-align:center;margin-bottom:32px">How Campus Gigs Works</h2>
+    <div class="steps-3 steps-3--icons">
+      <div><span class="step-ico" data-ico="search"></span><h3>1. Browse</h3><p>Find the service you need, from logos and websites to tutoring and thesis editing.</p></div>
+      <div><span class="step-ico" data-ico="handshake"></span><h3>2. Connect</h3><p>Chat with the seller, agree on the details and place your order in a few taps.</p></div>
+      <div><span class="step-ico" data-ico="check-circle"></span><h3>3. Get It Done</h3><p>Meet on campus, receive your work and leave a review to help the next student.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="features-title">
+    <h2 class="h-rule" id="features-title" style="margin-bottom:28px">What you can do from your profile</h2>
+    <div class="acc-split">
+      <div class="acc" id="profile-acc">
+        <div class="acc__item"><h3><button class="acc__btn" type="button" id="pa1b" aria-expanded="true" aria-controls="pa1p">Track your orders <span data-ico="chevron-down" data-size="20"></span></button></h3><div class="acc__panel" id="pa1p" role="region" aria-labelledby="pa1b">See every order in one place, from In Progress to Completed, with the date, time and package you chose.</div></div>
+        <div class="acc__item"><h3><button class="acc__btn" type="button" id="pa2b" aria-expanded="false" aria-controls="pa2p">Choose who to work with <span data-ico="chevron-down" data-size="20"></span></button></h3><div class="acc__panel" id="pa2p" role="region" aria-labelledby="pa2b" hidden>Compare packages, delivery days and honest reviews before you decide, then save the gigs you like.</div></div>
+        <div class="acc__item"><h3><button class="acc__btn" type="button" id="pa3b" aria-expanded="false" aria-controls="pa3p">Message sellers <span data-ico="chevron-down" data-size="20"></span></button></h3><div class="acc__panel" id="pa3p" role="region" aria-labelledby="pa3b" hidden>Ask questions and agree on a meet-up time right in the app. Replies show up in your inbox.</div></div>
+      </div>
+      <div class="acc__preview" aria-hidden="true"><div class="acc__preview-card"><span class="pill pill--done" style="justify-self:start" data-ico="check" data-size="14"> Completed</span><div class="skeleton"></div><div class="skeleton skeleton--short"></div><div class="skeleton"></div></div></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="who-title">
+    <h2 class="h-rule" id="who-title" style="margin-bottom:16px">Who It's For</h2>
+    <p style="max-width:60ch">Every SLSU student, whether you are looking for help or want to share your skills.</p>
+  </section>
+
+  <section class="section container" aria-label="What a student says">
+    <div class="quote-band" id="about-quote"></div>
+  </section>
+
+  <section class="section container" id="faq" aria-labelledby="faq-title">
+    <div class="faq-split">
+      <h2 class="h-rule" id="faq-title">Frequently Asked Questions</h2>
+      <div class="acc" id="faq-acc"></div>
+    </div>
+  </section>
+
+  <section class="section container contact-wrap" id="contact" aria-labelledby="contact-title">
+    <div class="contact-head">
+      <p class="eyebrow">Contact us</p>
+      <h2 class="h-rule" id="contact-title">Let's stay in touch!</h2>
+      <p>Have questions, feedback, or need help? We'd love to hear from you.</p>
+    </div>
+    <div class="contact-body">
+      <div class="contact-info">
+        <div class="contact-photo" id="contact-photo"></div>
+        <div class="contact-info__row"><span class="contact-info__icon" id="ci-mail"></span><div><h3>Email</h3><a href="mailto:campusgigs@slsu.edu.ph">campusgigs@slsu.edu.ph</a></div></div>
+        <div class="contact-info__row"><span class="contact-info__icon" id="ci-pin"></span><div><h3>Visit Us</h3><p>SLSU Main Campus</p></div></div>
+        <div class="contact-info__row"><span class="contact-info__icon" id="ci-users"></span><div><h3>Follow Us</h3><div class="socials socials--dark" id="contact-socials"></div></div></div>
+      </div>
+
+      <div class="card card--pad contact-card" id="contact-card">
+        <h3>Send us a message</h3>
+        <form id="contact-form" novalidate>
+          <div class="field" id="f-name"><label for="c-name">Name <span aria-hidden="true">*</span></label><input class="input" id="c-name" name="name" autocomplete="name" required maxlength="80"><p class="field__error" id="e-name" hidden></p></div>
+          <div class="field" id="f-email"><label for="c-email">Email <span aria-hidden="true">*</span></label><input class="input" id="c-email" name="email" type="email" autocomplete="email" required maxlength="120"><p class="field__error" id="e-email" hidden></p></div>
+          <div class="field" id="f-message"><label for="c-message">Message <span aria-hidden="true">*</span></label><textarea class="input textarea" id="c-message" name="message" required maxlength="2000"></textarea><p class="field__error" id="e-message" hidden></p></div>
+          <p class="field__error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn--primary contact-card__send" type="submit" id="send-btn">Send Message <span id="send-arrow"></span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-label="Get started">
+    <div class="about-cta">
+      <div class="about-cta__photo" id="about-cta-photo"></div>
+      <div id="about-cta-card"></div>
+    </div>
+  </section>
+
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/about.js"></script>
+</body>
+</html>

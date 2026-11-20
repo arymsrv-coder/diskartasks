@@ -1,0 +1,180 @@
+/* Shell: logo, storage notice, header, mega menu, avatar menu, app bar, bottom navigation, footer.
+   Header and footer follow the Upwork structure from the reference pass, in the mockups' colours and copy. */
+
+/* ---- Logo ---- */
+.logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--deep); text-decoration: none; }
+.logo__text { font: 600 18px/1.05 var(--font-head); }
+.logo__g { stroke: var(--teal); }
+.logo--sm .logo__text { font-size: 16px; }
+.logo--light { color: var(--ivory); }
+.logo--light .logo__g { stroke: var(--olive); }
+
+/* ---- Storage notice (only when localStorage is blocked or per-file) ---- */
+.storage-notice { padding: 10px var(--gutter); background: var(--olive); color: var(--deep); font: 500 14px/20px var(--font-body); text-align: center; }
+.storage-notice--warn { background: var(--cream); font-weight: 600; border-bottom: 2px solid var(--deep); }
+
+/* ---- Header (from 1024px) ---- */
+.site-header { position: sticky; top: 0; z-index: var(--z-header); background: var(--chrome-bg); border-bottom: 1px solid transparent; transition: box-shadow 0.2s, border-color 0.2s; }
+.site-header.is-scrolled, .appbar.is-scrolled { box-shadow: 0 2px 14px rgba(11, 29, 34, 0.08); border-bottom-color: var(--line); }
+.site-header__inner { display: flex; align-items: center; gap: 20px; height: var(--h-header); }
+.site-header > .container { max-width: 1360px; }   /* the header is a little wider than the page so a signed-in seller's controls leave room for search */
+.site-header__actions { display: flex; align-items: center; gap: 8px; margin-left: auto; flex: none; }
+
+.nav { display: flex; align-items: center; gap: 2px; flex: none; }
+.nav__item { display: flex; align-items: center; }
+.nav__link {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 12px; border-radius: var(--r8);
+  font: 500 15px/1 var(--font-body); text-decoration: none; white-space: nowrap; transition: background-color 0.15s;
+}
+.nav__link:hover { background: rgba(var(--deep-rgb), 0.06); }
+.nav__link[aria-current="page"] { font-weight: 700; box-shadow: inset 0 -2px 0 var(--deep); border-radius: var(--r8) var(--r8) 0 0; }
+.nav__chev { display: grid; place-items: center; width: 44px; height: 44px; margin-left: -14px; border-radius: var(--r8); }
+.nav__chev:hover { background: rgba(var(--deep-rgb), 0.06); }
+.nav__chev .icon { transition: transform 0.2s; }
+.nav__chev[aria-expanded="true"] .icon { transform: rotate(180deg); }
+
+/* Search with a category scope, as in Upwork's header */
+.search {
+  display: flex; align-items: center; flex: 1 1 260px; min-width: 0; max-width: 460px; height: 48px;
+  border: 1.5px solid var(--line-strong); border-radius: var(--r-pill); background: var(--card); overflow: hidden;
+}
+.search:focus-within { border-color: var(--deep); box-shadow: 0 0 0 1px var(--deep); }
+.search__scope {
+  appearance: none; -webkit-appearance: none; flex: none; max-width: 150px; height: 100%; padding: 0 28px 0 16px; border: 0; border-right: 1px solid var(--line);
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230B1D22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+  font: 500 14px/1 var(--font-body); cursor: pointer; text-overflow: ellipsis;
+}
+.search__input { flex: 1; min-width: 0; height: 100%; padding: 0 12px 0 16px; border: 0; background: transparent; font: 400 15px/1 var(--font-body); }
+/* the control that has focus gets its own inset ring (the wrapper clips outer outlines) on top of the wrapper's ring */
+.search__input:focus-visible, .search__scope:focus-visible, .search__btn:focus-visible { outline: 2px solid var(--deep); outline-offset: -4px; border-radius: var(--r-pill); }
+.search__input::placeholder { color: var(--muted); opacity: 1; }
+.search__btn { display: grid; place-items: center; flex: none; width: 48px; height: 100%; }
+.search__btn:hover { background: rgba(var(--deep-rgb), 0.07); }
+.search--drawer { max-width: none; flex: none; }
+
+.icon-btn { position: relative; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--deep); text-decoration: none; transition: background-color 0.15s; }
+.icon-btn:hover { background: rgba(var(--deep-rgb), 0.07); }
+.badge-dot {
+  position: absolute; top: 3px; right: 0; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px;
+  background: var(--danger); color: #fff; font: 700 11px/18px var(--font-body); text-align: center;
+}
+.avatar-btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; }
+
+/* ---- Avatar menu ---- */
+.menu-wrap { position: relative; }
+.menu {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: var(--z-mega); min-width: 260px; padding: 8px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r16); box-shadow: var(--shadow-pop); animation: fade-in 0.15s;
+}
+.menu__head { display: grid; gap: 2px; padding: 8px 12px 12px; }
+.menu__head span { font-size: 14px; color: var(--muted); }
+.menu__item {
+  display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 0 12px; border-radius: var(--r8);
+  font: 500 15px/1 var(--font-body); text-align: left; text-decoration: none; transition: background-color 0.15s;
+}
+.menu__item:hover, .menu__item:focus-visible { background: var(--olive); }
+.menu__sep { height: 1px; margin: 6px 8px; background: var(--line); }
+
+/* ---- Mega menu ---- */
+.mega { position: absolute; left: 0; right: 0; top: 100%; z-index: var(--z-mega); background: var(--card); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-pop); animation: fade-in 0.15s; }
+.mega__inner { display: grid; grid-template-columns: 280px minmax(0, 1fr); padding-block: 24px 0; }
+.mega__cats { display: grid; gap: 2px; align-content: start; padding-right: 16px; border-right: 1px solid var(--line); }
+.mega__cat {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 0 12px;
+  border-radius: var(--r8); font: 600 15px/1 var(--font-body); text-align: left; transition: background-color 0.15s;
+}
+.mega__cat[aria-selected="true"] { background: var(--olive); }
+.mega__subs { padding-left: 32px; }
+.mega__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px; align-content: start; }
+.mega__link { display: block; padding: 10px 12px; border-radius: var(--r8); text-decoration: none; transition: background-color 0.15s; }
+.mega__link:hover, .mega__link:focus-visible { background: rgba(var(--deep-rgb), 0.06); }
+.mega__link strong { display: block; font: 600 15px/22px var(--font-body); }
+.mega__link span { display: block; font: 400 13px/18px var(--font-body); color: var(--muted); }
+.mega__link--all strong { color: var(--teal); }
+.mega__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0 28px; margin-top: 20px; padding-block: 8px; border-top: 1px solid var(--line); }
+.mega__foot a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; min-width: 44px; font: 600 14px/1 var(--font-body); color: var(--teal); text-decoration: none; }
+.mega__foot a:hover { text-decoration: underline; }
+
+/* ---- App bar (below 1024px) ---- */
+.appbar { display: none; position: sticky; top: 0; z-index: var(--z-header); height: var(--h-appbar); background: var(--chrome-bg); border-bottom: 1px solid transparent; transition: box-shadow 0.2s, border-color 0.2s; }
+.appbar__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+.appbar__actions { display: flex; align-items: center; gap: 4px; }
+
+/* ---- Menu drawer content ---- */
+.drawer__body { display: grid; gap: 4px; align-content: start; }
+.menu-label { margin: 20px 0 4px; font: 600 12px/16px var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.menu-links { display: grid; }
+.menu-links a, .menu-links button, .menu-legal button {
+  display: flex; align-items: center; min-height: 44px; padding: 0 4px; font: 500 15px/1 var(--font-body); text-decoration: none; text-align: left;
+}
+.menu-links a:hover, .menu-links button:hover { text-decoration: underline; }
+.menu-links--main { margin-top: 8px; padding-top: 4px; }
+.acc__panel.menu-links { padding: 0 0 12px 12px; color: var(--deep); }
+.menu-actions { display: grid; gap: 12px; margin-top: 20px; }
+.menu-legal { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); }
+.menu-legal button { font-size: 13px; color: var(--muted); text-decoration: underline; }
+
+/* ---- Bottom navigation (below 768px, 64px) ---- */
+.bottomnav {
+  display: none; position: fixed; left: 12px; right: 12px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); z-index: var(--z-header);
+  height: var(--h-bottomnav); background: var(--card); border: 1px solid var(--line); border-radius: var(--r24); box-shadow: var(--shadow-pop);
+}
+.bottomnav__list { display: grid; grid-template-columns: repeat(5, 1fr); height: 100%; align-items: center; }
+.bottomnav__item { position: relative; display: grid; justify-items: center; gap: 2px; padding: 6px 0; font: 500 12px/16px var(--font-body); text-decoration: none; color: var(--muted); }
+.bottomnav__item[aria-current="page"] { color: var(--deep); font-weight: 700; }
+.bottomnav__item .badge-dot { top: 0; right: calc(50% - 24px); }
+.bottomnav__plus { display: grid; place-items: center; width: 48px; height: 48px; margin: auto; border-radius: 50%; background: var(--green); color: var(--on-green); }
+
+/* ---- Breadcrumb strip above the footer ---- */
+.breadcrumb-strip { padding-block: 32px 0; }
+
+/* ---- Footer (Upwork's link columns inside the mockup's Deep Teal footer) ---- */
+.site-footer { position: relative; margin-top: 64px; padding: 56px 0 16px; overflow: hidden; background: var(--forest); color: var(--ivory); }
+.site-footer::before, .site-footer::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.site-footer::before { width: 440px; height: 440px; left: -160px; bottom: -220px; background: var(--teal); opacity: 0.35; }
+.site-footer::after { width: 360px; height: 360px; right: -120px; top: -170px; background: var(--orange); opacity: 0.22; }
+.site-footer > .container { position: relative; z-index: 1; }
+.site-footer__top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 40px; align-items: start; padding-bottom: 40px; border-bottom: 1px solid rgba(253, 251, 227, 0.18); }
+.site-footer__tag { margin-top: 12px; font-size: 15px; color: rgba(253, 251, 227, 0.88); }
+.site-footer__follow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-top: 20px; font-weight: 600; }
+.socials { display: flex; gap: 8px; }
+.social { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(253, 251, 227, 0.4); border-radius: 50%; transition: background-color 0.15s; }
+.social:hover { background: rgba(253, 251, 227, 0.14); }
+.site-footer__cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; padding-block: 40px; }
+.site-footer__h { margin: 0 0 8px; font: 600 16px/24px var(--font-head); color: var(--ivory); }
+.site-footer__group ul { display: grid; }
+.site-footer__group a, .site-footer__group button, .site-footer__legal button, .site-footer__legal a {
+  display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; font: 400 15px/1.3 var(--font-body); color: rgba(253, 251, 227, 0.88); text-decoration: none; text-align: left;
+}
+.site-footer__group a:hover, .site-footer__group button:hover, .site-footer__legal button:hover, .site-footer__legal a:hover { color: var(--ivory); text-decoration: underline; }
+.site-footer__legal { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; padding-top: 16px; border-top: 1px solid rgba(253, 251, 227, 0.18); font-size: 13px; color: rgba(253, 251, 227, 0.88); }
+.site-footer__legal > div { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.site-footer__legal button, .site-footer__legal a { font-size: 13px; text-decoration: underline; }
+
+.newsletter__label { display: block; font: 600 16px/24px var(--font-head); }
+.newsletter__hint { margin: 2px 0 12px; font-size: 14px; color: rgba(253, 251, 227, 0.88); }
+.newsletter__row { display: flex; gap: 8px; }
+.newsletter__row .input { flex: 1; min-width: 0; }
+.newsletter__msg { min-height: 24px; margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--cream); }
+.newsletter__msg.is-error { color: #FFB4AB; }
+
+/* ---- Responsive shell ---- */
+@media (max-width: 1279px) {
+  .search__scope { display: none; }
+  .search { flex-basis: 180px; }
+  .site-header__inner { gap: 12px; }
+  .nav__link { padding: 0 8px; }
+}
+@media (max-width: 1023px) {
+  .site-header { display: none; }
+  .appbar { display: block; }
+  .site-footer__top { grid-template-columns: 1fr; gap: 28px; }
+  .site-footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .bottomnav { display: block; }
+  body { padding-bottom: calc(var(--h-bottomnav) + 16px + env(safe-area-inset-bottom, 0px)); }
+  .site-footer { margin-top: 48px; padding-top: 40px; }
+  .site-footer__cols { grid-template-columns: 1fr; gap: 8px; padding-block: 24px; }
+  .mega { display: none; }
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post a gig | Campus Gigs</title>
+  <meta name="description" content="Post a gig on Campus Gigs: set your packages, add a cover and publish.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <div class="container" id="postgig-root">
+    <h1 class="order-title" id="page-title">Post a gig</h1>
+
+    <div class="postgig-layout" id="postgig-layout">
+      <form class="card card--pad postgig-form" id="gig-form" novalidate>
+        <p class="field__error" id="form-error" role="alert" hidden></p>
+
+        <div class="field" id="f-title">
+          <label for="title">Title</label>
+          <input class="input" id="title" maxlength="80" autocomplete="off" placeholder="e.g. Minimalist logo for your capstone">
+          <p class="counter" id="title-count">0 / 80</p>
+          <p class="field__error" id="e-title" hidden></p>
+        </div>
+
+        <fieldset class="field postgig-fieldset" id="f-category">
+          <legend class="field__label">Category</legend>
+          <div class="chip-row" id="category-chips" role="radiogroup" aria-label="Category"></div>
+          <p class="field__error" id="e-category" hidden></p>
+        </fieldset>
+
+        <fieldset class="field postgig-fieldset">
+          <legend class="field__label">Priced</legend>
+          <div class="segmented" id="unit-seg" role="group" aria-label="Pricing unit"><button type="button" data-unit="project" aria-pressed="true" class="is-active">Per project</button><button type="button" data-unit="hour" aria-pressed="false">Per hour</button></div>
+        </fieldset>
+
+        <div class="field" id="f-description">
+          <label for="description">Description</label>
+          <textarea class="input textarea" id="description" maxlength="2000" placeholder="What will you do, and what should the buyer send you?"></textarea>
+          <p class="counter" id="desc-count">0 / 2000</p>
+          <p class="field__error" id="e-description" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="skill-input">Skills <span class="caption">(type a skill and press Enter)</span></label>
+          <input class="input" id="skill-input" maxlength="30" autocomplete="off" placeholder="e.g. Canva">
+          <div class="chip-row" id="skill-chips"></div>
+        </div>
+
+        <fieldset class="field postgig-fieldset" id="f-packages">
+          <legend class="field__label">Packages <span class="caption">(Basic is required, up to three)</span></legend>
+          <div id="tiers"></div>
+          <div class="chip-row" id="add-tiers"></div>
+          <p class="field__error" id="e-packages" hidden></p>
+        </fieldset>
+
+        <fieldset class="field postgig-fieldset">
+          <legend class="field__label">Cover</legend>
+          <div class="cover-choices" id="cover-choices"></div>
+          <div class="cover-upload">
+            <input type="file" id="cover-file" accept="image/png,image/jpeg,image/webp" class="sr-only">
+            <label class="btn btn--outline btn--sm" for="cover-file" id="cover-file-label">Upload a photo</label>
+            <button class="btn btn--outline btn--sm" type="button" id="cover-remove" hidden>Remove photo</button>
+            <span class="caption">Optional. Photos are resized to fit.</span>
+          </div>
+        </fieldset>
+
+        <button class="btn btn--primary btn--block" type="submit" id="publish">Publish gig</button>
+      </form>
+
+      <aside class="postgig-preview" aria-label="Preview">
+        <h2>Preview</h2>
+        <div id="preview" inert></div>
+        <p class="hint-note">This is how your gig will look in Browse.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/post-gig.js"></script>
+</body>
+</html>

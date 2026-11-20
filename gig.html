@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gig | Campus Gigs</title>
+  <meta name="description" content="A gig on Campus Gigs: packages, delivery, reviews and the seller.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <div class="container" id="gig-root">
+    <div class="gig-crumbs" id="gig-crumbs"></div>
+    <div class="gig-layout">
+      <div class="gig-main">
+        <div class="gallery" id="gallery"></div>
+        <h1 class="gig-title" id="gig-title"></h1>
+        <div class="seller-strip" id="seller-strip"></div>
+        <section class="gig-section" aria-labelledby="about-gig">
+          <h2 id="about-gig">About this gig</h2>
+          <p class="gig-desc" id="gig-desc"></p>
+          <div class="seller-card__chips" id="gig-skills"></div>
+        </section>
+        <section class="gig-section" id="reviews" aria-labelledby="reviews-title">
+          <h2 id="reviews-title">Reviews</h2>
+          <div class="rating-line" id="rating-line"></div>
+          <div id="review-list"></div>
+        </section>
+        <section class="gig-section" id="more" aria-labelledby="more-title" hidden>
+          <h2 id="more-title">More from this seller</h2>
+          <div class="gig-grid gig-grid--3" id="more-grid"></div>
+        </section>
+      </div>
+
+      <aside class="gig-side" aria-label="Packages">
+        <div class="card card--pad package-card">
+          <h2 class="package-card__title">Choose a package</h2>
+          <div class="segmented package-tabs" id="pkg-tabs" role="group" aria-label="Package"></div>
+          <div id="pkg-panel" aria-live="polite"></div>
+          <div id="pkg-cta"></div>
+          <p class="hint-note" id="pay-note">Pay on meet-up (demo). No payment is taken on this site.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="gig-sticky" id="gig-sticky" hidden></div>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/gig.js"></script>
+</body>
+</html>

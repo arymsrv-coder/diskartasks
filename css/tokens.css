@@ -1,0 +1,111 @@
+/* Design tokens. Palette, type, radii, spacing and component heights come from the UI kit board;
+   the "reference pass" block adds what the Indeed and Upwork references need, in the kit's colours. */
+:root {
+  /* Palette: the "colourful" web palette (default). Dark mode flips these inside the dark areas, see the end of this file. */
+  --paper: #FEF7E7;   /* page background: warm cream */
+  --card: #FFFCF3;    /* card surfaces: a lighter tint of the paper */
+  --cream: #FDE6CC;   /* soft peach surface */
+  --olive: #D7F2E0;   /* soft mint surface (name kept from the first palette) */
+  --ivory: #FFF8E6;   /* light text and icons on dark or saturated surfaces */
+  --deep: #082743;    /* text: deep navy */
+  --deep-rgb: 8, 39, 67;  /* the same colour as r, g, b for tints and hovers */
+  --forest: #082E34;  /* dark surfaces: footer, banner, media cards */
+  --teal: #0B6B4F;    /* green-teal accent: links, icons, accent headings */
+  --green: #017A3F;   /* primary buttons and selected states (white text 5:1) */
+  --on-green: #FFFFFF;
+  --orange: #FF6D42;  /* "Become a seller" and other warm calls to action (dark text on it) */
+  --amber: #FF9A00;   /* Sign Up in the header (dark text on it) */
+  --coral: #E76C4A; --mint: #BEE8D0; --sky: #C1E5F6; --sage: #C5D2B4; --blue: #64BFE4; --yellow: #F4AD2F;
+
+  /* Derived */
+  --muted: #465B63;                   /* secondary text, 6.2:1 on the paper */
+  --line: rgba(8, 39, 67, 0.14);      /* hairlines and card borders */
+  --line-strong: rgba(8, 39, 67, 0.55); /* input and control borders, 3.8:1 on the paper */
+  --green-hover: #01663A;
+  --deep-hover: #0E3A5C;
+  --teal-hover: #095840;
+  --star: #E3A02F;                    /* rating stars (decorative, never the only signal) */
+  --danger: #B3261E;                  /* errors and cross marks, 5:1 or better on the paper, cream and mint */
+
+  /* Role tokens that dark mode changes (everything else follows the palette above) */
+  --chrome-bg: var(--paper);          /* header and app bar */
+  --hero-bg: linear-gradient(180deg, #FDEAD0 0%, #FEF1DC 55%, var(--paper) 100%);
+  --curve-bg: var(--mint);            /* About hero */
+  --accent-text: #A93208;             /* warm accent words on light surfaces (5:1 on mint and paper) */
+  --filters-bg: var(--olive);
+  --auth-card: rgba(255, 252, 243, 0.96);
+  --hero-deco-a: var(--mint); --hero-deco-b: var(--coral); --hero-deco-c: var(--yellow);
+  --cta: #FF9A00; --on-cta: #082743;      /* amber button (Sign Up) */
+  --cta2: #FF6D42; --on-cta2: #082743;    /* orange button (Become a seller) */
+  --frame-1: #9DB08A; --frame-2: #F4AD2F; --frame-3: #64BFE4; --frame-4: #F4AD2F;   /* photo frame borders in the hero collage */
+  --price: #C2410C;                   /* gig prices: warm orange-brown, 5:1 on cards */
+
+  /* Radii (kit) */
+  --r4: 4px; --r8: 8px; --r12: 12px; --r16: 16px; --r24: 24px;
+  --r-pill: 999px;
+
+  /* Spacing, 8-point system (kit) */
+  --s4: 4px; --s8: 8px; --s12: 12px; --s16: 16px; --s20: 20px; --s24: 24px; --s32: 32px; --s40: 40px;
+
+  /* Component heights (kit) */
+  --h-btn: 48px; --h-input: 52px; --h-chip: 36px; --h-seg: 40px; --h-filter: 56px; --h-bottomnav: 64px;
+  --h-btn-sm: 44px;   /* small buttons stay at the 44px touch-target minimum */
+
+  /* Reference pass */
+  --shadow-card: 0 1px 2px rgba(8, 39, 67, 0.06), 0 6px 18px rgba(8, 39, 67, 0.09);
+  --shadow-pop: 0 4px 12px rgba(8, 39, 67, 0.12), 0 16px 40px rgba(8, 39, 67, 0.18);
+  --shadow-modal: 0 24px 64px rgba(11, 29, 34, 0.32);
+  --grad-soft: linear-gradient(90deg, var(--olive), var(--cream));   /* Upwork's highlighted row */
+  --grad-band: linear-gradient(135deg, var(--forest), var(--teal));    /* CTA bands */
+  --container: 1200px;
+  --gutter: 24px;
+  --h-header: 72px;
+  --h-appbar: 56px;
+  --fs-display: clamp(40px, 5.5vw, 64px);
+
+  /* Layers */
+  --z-header: 50; --z-mega: 60; --z-drawer: 70; --z-modal: 80; --z-toast: 90;
+
+  /* Type */
+  --font-head: 'Poppins', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+    --h-header: var(--h-appbar);
+  }
+}
+
+/* ============================================================ Dark mode (html[data-theme="dark"])
+   The dark palette board keeps warm paper for the content and turns the "chrome" dark: header, heroes, banners,
+   filter and navigation panels, forms on photos. Inside those areas the palette tokens are flipped, so every
+   component built from them (buttons, chips, inputs, text) follows without its own dark rules. */
+:root[data-theme="dark"] {
+  --paper: #F6E8D2;      /* content stays warm paper, a touch deeper than the colourful cream */
+  --card: #FFF8EA;
+  --cream: #F1DFC4;
+  --olive: #ECE6BC;
+  --forest: #0B1C23;
+  --teal: #2B5663;
+  --green: #345F6A;      /* primary buttons on paper: slate teal with cream text */
+  --on-green: #FFFBDC;
+  --muted: #3F5159;
+  --price: #A8360A;
+  --chrome-bg: #345F6A;
+  --hero-bg: #0B1C23;
+  --curve-bg: #0B1C23; --filters-bg: #345F6A; --auth-card: #12303A;
+  --hero-deco-a: #345F6A; --hero-deco-b: #ECE6BC; --hero-deco-c: #D4D161;
+  --cta: #ECE6BC; --on-cta: #0B1C23; --cta2: #D4D161; --on-cta2: #0B1C23;
+  --frame-1: #F6E8D2; --frame-2: #F6E8D2; --frame-3: #F6E8D2; --frame-4: #F6E8D2;
+  color-scheme: dark;
+}
+:root[data-theme="dark"] :is(.site-header, .appbar, .hero, .hero-curve, .page-banner, .pricing-hero,
+    .filters, .auth__card, .contact-card, .profile-nav) {
+  --paper: #0B1C23; --card: #12303A; --cream: #17394A; --olive: #1E4552; --ivory: #0B1C23;
+  --deep: #FFFBDC; --deep-rgb: 255, 251, 220; --muted: #D3DDD3; --teal: #D4D161; --accent-text: #D4D161; --mint: #1E4552; --green: #ECE6BC; --on-green: #0B1C23; --green-hover: #FFFBDC;
+  --line: rgba(255, 251, 220, 0.24); --line-strong: rgba(255, 251, 220, 0.62); --deep-hover: #ECE6BC;
+  color: var(--deep);
+}
+:root[data-theme="dark"] .site-header, :root[data-theme="dark"] .appbar { --paper: #345F6A; --card: #3F6C78; }

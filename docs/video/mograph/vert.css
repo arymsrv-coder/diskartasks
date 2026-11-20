@@ -1,0 +1,15 @@
+/* 9:16 overrides, loaded when the page URL has ?v=1 */
+html,body{width:1080px!important;height:1920px!important}
+.scene>*{zoom:.66}
+.scene>.feed{zoom:1}
+.scene>.clock{zoom:.9}
+#s1 .sub{zoom:1}
+.layer>*{zoom:.66}
+#c>table{zoom:.74}
+#c>.h{zoom:.8}
+#s1>*,#s2>*,#s3>*{zoom:.85}
+#s4>*{zoom:.52}
+#k4>*{zoom:.7}
+.foot{font-size:34px}
+#s9 .cap{max-width:1300px;line-height:1.25;text-align:center}
+#s7>*{zoom:.5}

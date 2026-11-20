@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | Campus Gigs</title>
+  <meta name="description" content="Sign in to your Campus Gigs account.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <section class="auth" aria-labelledby="auth-title">
+    <div class="auth__bg" id="auth-bg" aria-hidden="true"></div>
+    <div class="auth__card">
+      <h1 id="auth-title">Welcome back!</h1>
+      <p class="auth__sub">Sign in to access your account</p>
+
+      <form id="signin-form" novalidate>
+        <p class="field__error" id="auth-error" role="alert" hidden></p>
+        <div class="field">
+          <label for="email">Email address <span aria-hidden="true">*</span></label>
+          <div class="input-wrap"><span id="ico-mail"></span><input class="input" id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required></div>
+        </div>
+        <div class="field">
+          <label for="password">Password <span aria-hidden="true">*</span></label>
+          <div class="input-wrap input-wrap--end"><input class="input" id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button class="icon-btn input-wrap__end" type="button" id="toggle-pass" aria-pressed="false" aria-label="Show password"></button></div>
+        </div>
+        <div class="auth__forgot"><button class="link-btn" type="button" id="forgot">Forgot password?</button></div>
+        <button class="btn btn--primary btn--block" type="submit" id="submit">Sign In <span id="ico-arrow"></span></button>
+      </form>
+
+      <div class="auth__divider"><span>or continue with</span></div>
+      <div class="auth__socials">
+        <button class="btn btn--outline" type="button" data-social-signin="Google"><span id="ico-google"></span> Google</button>
+        <button class="btn btn--outline" type="button" data-social-signin="Apple"><span id="ico-apple"></span> Apple</button>
+      </div>
+
+      <p class="auth__switch">Don't have an account? <a class="auth__link" id="to-signup" href="signup.html">Sign up</a></p>
+
+      <div class="demo-row" aria-label="Demo accounts">
+        <span class="caption">Try a demo account:</span>
+        <button class="btn btn--outline btn--sm" type="button" data-demo="buyer">Demo buyer</button>
+        <button class="btn btn--outline btn--sm" type="button" data-demo="seller">Demo seller</button>
+      </div>
+      <p class="demo-reset caption">Demo account missing or not working? <button class="link-btn" type="button" id="demo-reset">Reset demo data</button></p>
+    </div>
+  </section>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/signin.js"></script>
+</body>
+</html>

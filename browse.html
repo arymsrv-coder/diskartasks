@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse Gigs | Campus Gigs</title>
+  <meta name="description" content="Find design, tech, writing, tutoring and admin services from SLSU students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+
+  <section class="browse-banner" aria-labelledby="browse-title">
+    <div class="browse-banner__img" id="browse-banner-img"></div>
+    <div class="container browse-banner__text">
+      <h1 id="browse-title">Browse Gigs</h1>
+      <p>Find the perfect service for your needs.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cat-tabs" role="tablist" aria-label="Categories" id="cat-tabs"></div>
+
+    <div class="browse">
+      <aside class="filters" id="filters-desktop" aria-label="Filters"></aside>
+
+      <div class="browse__main">
+        <div class="toolbar">
+          <div class="input-wrap toolbar__search">
+            <span id="search-icon"></span>
+            <input class="input" id="q" type="search" placeholder="Search gigs..." aria-label="Search gigs" autocomplete="off">
+          </div>
+          <button class="btn btn--outline btn--icon toolbar__filters" id="open-filters" type="button" aria-label="Filters" aria-haspopup="dialog"></button>
+          <div class="toolbar__sort">
+            <label class="sr-only" for="sort">Sort by</label>
+            <select class="input select" id="sort"></select>
+          </div>
+        </div>
+
+        <div class="active-filters" id="active-filters"></div>
+        <h2 class="sr-only" id="results-title">Gig results</h2>
+        <p class="caption results-count" id="results-count" aria-live="polite"></p>
+
+        <div id="results" tabindex="-1">
+          <div class="gig-grid gig-grid--3" id="grid"></div>
+          <div id="empty" hidden></div>
+        </div>
+        <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="rec-title">
+      <div class="section__head"><h2 id="rec-title">Recommended for you</h2><a class="link-arrow" href="browse.html?sort=top">See all <span id="rec-arrow"></span></a></div>
+      <div class="gig-grid" id="recommended"></div>
+    </section>
+
+    <section class="section" aria-labelledby="sellers-title">
+      <div class="section__head"><h2 id="sellers-title">Top sellers</h2></div>
+      <div class="seller-grid" id="top-sellers"></div>
+    </section>
+
+    <section class="section" aria-labelledby="popular-title">
+      <h2 id="popular-title" style="margin-bottom:12px">Popular searches</h2>
+      <div class="link-grid" id="popular-searches"></div>
+    </section>
+  </div>
+
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/browse.js"></script>
+</body>
+</html>

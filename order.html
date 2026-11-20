@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Place an order | Campus Gigs</title>
+  <meta name="description" content="Choose a date and time and place your order with an SLSU student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <div class="container" id="order-root">
+    <div class="gig-crumbs" id="order-crumbs"></div>
+    <h1 class="order-title">Place your order</h1>
+    <div class="order-layout">
+      <div class="order-form-col" id="order-form-col">
+        <form class="card card--pad order-form" id="order-form" novalidate>
+          <p class="field__error" id="form-error" role="alert" hidden></p>
+          <div class="field" id="f-qty" hidden>
+            <span class="field__label" id="qty-label">Hours</span>
+            <div class="stepper" id="stepper" role="group" aria-labelledby="qty-label">
+              <button type="button" id="qty-minus" aria-label="Fewer hours"></button>
+              <output id="qty-out" aria-live="polite">1</output>
+              <button type="button" id="qty-plus" aria-label="More hours"></button>
+            </div>
+            <p class="field__error" id="e-qty" hidden></p>
+          </div>
+          <div class="order-when">
+            <div class="field" id="f-date">
+              <label for="date">Preferred date</label>
+              <div class="input-wrap"><span id="ico-cal"></span><input class="input" id="date" type="date" required></div>
+            </div>
+            <div class="field" id="f-time">
+              <label for="time">Preferred time</label>
+              <div class="input-wrap"><span id="ico-clock"></span><input class="input" id="time" type="time" required></div>
+            </div>
+          </div>
+          <p class="field__error" id="e-when" hidden></p>
+          <div class="field">
+            <label for="notes">Notes to the seller <span class="caption">(optional)</span></label>
+            <textarea class="input textarea" id="notes" maxlength="500" placeholder="Tell them what you need and where you would like to meet"></textarea>
+            <p class="counter" id="notes-count">0 / 500</p>
+          </div>
+          <div class="field">
+            <span class="field__label">Payment</span>
+            <p class="payment-box">Pay on meet-up (demo)</p>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit" id="place">Place order</button>
+        </form>
+      </div>
+
+      <aside class="order-summary" aria-label="Order summary">
+        <div class="card card--pad summary">
+          <div class="summary__cover" id="summary-cover"></div>
+          <h2 class="summary__title" id="summary-title"></h2>
+          <p class="summary__seller" id="summary-seller"></p>
+          <dl class="detail-list" id="summary-list"></dl>
+          <p class="summary__total"><span>Total</span><strong id="summary-total"></strong></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/order.js"></script>
+</body>
+</html>

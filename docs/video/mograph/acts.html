@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tl"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#2F5A66;font-family:Inter,system-ui,sans-serif;color:#fff}
+.layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;transition:opacity .35s}
+.layer.on{opacity:1}
+.h{font-family:Poppins,system-ui;font-weight:800;letter-spacing:-1px;text-align:center}
+.gold{color:#f4b942}
+/* M1 */
+.icons{display:flex;gap:60px;margin-top:50px}
+.ic{width:300px;height:300px;border-radius:36px;background:#ffffff1c;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:130px;opacity:0;transform:translateY(40px) scale(.9);transition:all .35s}
+.ic small{font:600 44px Poppins;margin-top:10px}
+.ic.on{opacity:1;transform:none}
+/* M2 compare */
+table{border-collapse:separate;border-spacing:0 10px;font-family:Poppins;font-size:38px}
+th{font-size:44px;padding:0 50px;font-weight:800}
+td{background:#ffffff18;padding:12px 40px;text-align:center}
+td:first-child{text-align:left;border-radius:20px 0 0 20px;font-weight:600;min-width:560px}
+td:last-child{border-radius:0 20px 20px 0}
+tr{opacity:0;transform:translateX(-30px);transition:all .35s}tr.on{opacity:1;transform:none}
+.yes{color:#7dffa1;font-size:50px}.no{color:#ff8a80;font-size:50px}
+.us{background:#ffffff30}
+.num{font-family:Poppins;font-weight:800;font-size:330px;line-height:1}
+.lab{font:600 62px Poppins;margin-top:6px;opacity:.95}
+.foot{position:absolute;bottom:30px;left:0;right:0;text-align:center;font-size:30px;opacity:.7}
+/* M3 */
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s;transform:scale(1.02)}
+.bg.on{opacity:1;transform:scale(1.12);transition:opacity 1s,transform 6s linear}
+.shade{position:absolute;inset:0;background:linear-gradient(#0a2a33cc,#2f5a6699)}
+.logo{font-family:Poppins;font-weight:800;font-size:190px}.logo span{color:#f4b942}
+.disc{margin-top:40px;border:4px solid #f4b942;border-radius:20px;padding:22px 44px;font:600 44px Poppins;text-align:center;max-width:1500px;line-height:1.3}
+.credit{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:26px;opacity:.75}
+.slam{font-size:300px;transform:scale(2.2);opacity:0;transition:all .2s}.slam.on{transform:none;opacity:1}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+</style><script>if(new URLSearchParams(location.search).get('v')){var l=document.createElement('link');l.rel='stylesheet';l.href='vert.css';document.head.appendChild(l)}</script></head><body>
+<div id="root"></div><div class="flash" id="fl"></div>
+<script>
+const $=s=>document.querySelector(s);
+const seg=new URLSearchParams(location.search).get('seg');
+const R=$('#root'); const T=[]; const at=(t,f)=>T.push([t,f]);
+function layer(id,html,extra=''){const d=document.createElement('div');d.className='layer';d.id=id;d.style.cssText=extra;d.innerHTML=html;R.appendChild(d);return d}
+function on(id){document.querySelectorAll('.layer').forEach(l=>l.classList.remove('on'));if(id)document.getElementById(id).classList.add('on')}
+function flash(){const f=$('#fl');f.style.transition='none';f.style.opacity=.85;requestAnimationFrame(()=>{f.style.transition='opacity .25s';f.style.opacity=0})}
+function count(el,to,from,ms,dec=0,suffix=''){const t0=performance.now();(function f(n){const p=Math.min(1,(n-t0)/ms);el.textContent=(from+(to-from)*(1-Math.pow(1-p,3))).toFixed(dec)+suffix;if(p<1)requestAnimationFrame(f)})(t0)}
+
+if(seg==='M1'){ // 8.6s
+  layer('a','<div class="h" style="font-size:150px">At ikaw, <span class="gold">Pay-Yuyan?</span></div><div class="icons"><div class="ic" id="i1">✂️<small>I-edit</small></div><div class="ic" id="i2">🎨<small>Mag-design</small></div><div class="ic" id="i3">💻<small>Mag-code</small></div><div class="ic" id="i4">📚<small>Magturo</small></div></div>');
+  layer('b','<div class="h" style="font-size:120px;line-height:1.15">Pagkakitaan mo<br>ang <span class="gold">talento</span> mo.</div>');
+  at(0,()=>on('a')); at(1.6,()=>$('#i1').classList.add('on')); at(3.5,()=>$('#i2').classList.add('on')); at(4.5,()=>$('#i3').classList.add('on')); at(5.5,()=>$('#i4').classList.add('on'));
+  at(6.3,()=>{on('b');flash()});
+}
+if(seg==='M2'){ // 33.8s, abs 176.4
+  const rows=[['Beripikadong estudyante','✔','✘'],['Pagsubaybay sa order','✔','✘'],['Rating at review','✔','✘'],['Bayad sa meet-up','✔','✘']];
+  layer('c','<div class="h" style="font-size:64px;margin-bottom:0;margin-top:-90px">Campus Gigs vs. Facebook groups</div><table><tr class="on"><th></th><th class="gold">Campus Gigs</th><th>Facebook groups</th></tr>'+rows.map((r,i)=>`<tr id="r${i}"><td>${r[0]}</td><td class="us yes">${r[1]}</td><td class="no">${r[2]}</td></tr>`).join('')+'</table><div class="h gold" id="all" style="font-size:80px;margin-top:10px;opacity:0;transition:opacity .4s">Lahat, nasa iisang lugar!</div>');
+  layer('s1','<div class="num gold" id="n1">0</div><div class="lab">gigs na naka-post</div>');
+  layer('s2','<div class="num gold" id="n2">0.0</div><div class="lab">★ karaniwang rating</div>');
+  layer('s3','<div class="num gold" id="n3">0/10</div><div class="lab">buyers nakahanap ng Pay-Yuyan sa loob ng isang araw</div>');
+  layer('s4','<div class="num slam" id="n4" style="font-size:420px">1 ARAW!</div>');
+  layer('foot','',''); document.body.insertAdjacentHTML('beforeend','<div class="foot" id="ft" style="opacity:0">Demo figures para sa course project na ito.</div>');
+  at(0,()=>on('c')); at(3.0,()=>$('#r0').classList.add('on')); at(5.6,()=>$('#r1').classList.add('on')); at(6.6,()=>$('#r2').classList.add('on')); at(8.7,()=>$('#r3').classList.add('on'));
+  at(11.3,()=>$('#all').style.opacity=1);
+  at(13.9,()=>{on('s1');flash();count($('#n1'),455,0,2800,0,'+');$('#ft').style.opacity=.7});
+  at(19.5,()=>{on('s2');flash();count($('#n2'),4.8,0,1800,1)});
+  at(25.3,()=>{on('s3');flash();const e=$('#n3');const t0=performance.now();(function f(n){const p=Math.min(1,(n-t0)/1800);e.textContent=Math.round(9*p)+'/10';if(p<1)requestAnimationFrame(f)})(t0)});
+  at(31.5,()=>{on('s4');$('#n4').classList.add('on');flash()});
+}
+if(seg==='M3'){ // 33.5s, abs 231.4
+  const imgs=['about-1','hero-1','about-2','hero-2','about-3','hero-3','about-4','hero-4'];
+  imgs.forEach((n,i)=>{const d=document.createElement('div');d.className='bg';d.id='bg'+i;d.style.backgroundImage=`url(../../../images/${n}.jpg)`;R.appendChild(d)});
+  R.insertAdjacentHTML('beforeend','<div class="shade" id="shade"></div>');
+  layer('k1','<div class="h" style="font-size:130px;text-shadow:0 4px 30px #0008">Isang <span class="gold">komunidad.</span></div>');
+  layer('k2','<div class="h" style="font-size:130px;text-shadow:0 4px 30px #0008">Nasa <span class="gold">tabi mo</span> lang.</div>');
+  layer('k3','<div class="logo">Campus <span>Gigs!</span></div><div class="h" id="tag" style="font-size:64px;margin-top:20px;opacity:0;transition:opacity .4s">Humanap ng mahuhusay na estudyante.</div>');
+  layer('k4','<div class="h slam" id="wt" style="font-size:290px;line-height:1.05">WALANG<br><span class="gold">TAMAD!</span></div>');
+  layer('k5','<div class="logo">Campus <span>Gigs</span></div><div class="h" style="font-size:72px;margin-top:10px">Maraming salamat po!</div><div class="disc">Demo lang ang lahat ng presyo.<br>Walang totoong perang kinukuha.</div><div class="credit">Larawan: SLSU Administration Building, CC BY-SA 4.0 · Mga kredito sa images/CREDITS.txt</div>');
+  let cur=-1; const show=i=>{document.querySelectorAll('.bg').forEach(b=>b.classList.remove('on'));if(i>=0)$('#bg'+i).classList.add('on')};
+  for(let i=0;i<8;i++) at(i*2.0,()=>show(i));
+  at(3.2,()=>{on('k1')}); at(13.0,()=>on(null)); at(14.6,()=>on('k2'));
+  at(16.4,()=>{show(-1);$('#shade').style.display='none';document.body.style.background='#2F5A66';on('k3');flash()});
+  at(17.8,()=>$('#tag').style.opacity=1);
+  at(23.5,()=>{on('k4');$('#wt').classList.add('on');flash()});
+  at(25.4,()=>{on('k5');document.body.style.background='linear-gradient(#2F5A66,#1d3f49)'});
+}
+window.begin=()=>{T.forEach(([t,f])=>setTimeout(f,t*1000));return performance.now()};
+</script></body></html>

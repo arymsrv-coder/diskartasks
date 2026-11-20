@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Campus Gigs</title>
+  <meta name="description" content="Create a Campus Gigs account with your SLSU email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+  <section class="auth" aria-labelledby="auth-title">
+    <div class="auth__bg" id="auth-bg" aria-hidden="true"></div>
+    <div class="auth__card">
+      <h1 id="auth-title">Create your account</h1>
+      <p class="auth__sub">Join Campus Gigs and start connecting with fellow SLSU students.</p>
+
+      <div class="auth-tabs" role="tablist" aria-label="Account type" id="role-tabs">
+        <button type="button" role="tab" id="tab-buyer" data-role="buyer" aria-selected="true" aria-controls="signup-form">Student (Buyer)</button>
+        <button type="button" role="tab" id="tab-seller" data-role="seller" aria-selected="false" aria-controls="signup-form" tabindex="-1">Freelancer (Seller)</button>
+      </div>
+
+      <form id="signup-form" role="tabpanel" aria-labelledby="tab-buyer" novalidate>
+        <p class="field__error" id="auth-error" role="alert" hidden></p>
+        <div class="field" id="f-name">
+          <label for="name">Full Name <span aria-hidden="true">*</span></label>
+          <div class="input-wrap"><span id="ico-user"></span><input class="input" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required maxlength="60"></div>
+          <p class="field__error" id="e-name" hidden></p>
+        </div>
+        <div class="field" id="f-email">
+          <label for="email">SLSU Email <span aria-hidden="true">*</span></label>
+          <div class="input-wrap"><span id="ico-mail"></span><input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@slsu.edu.ph" required></div>
+          <p class="field__error" id="e-email" hidden></p>
+        </div>
+        <div class="field" id="f-password">
+          <label for="password">Password <span aria-hidden="true">*</span></label>
+          <div class="input-wrap input-wrap--end"><input class="input" id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required aria-describedby="pass-note"><button class="icon-btn input-wrap__end" type="button" id="toggle-pass" aria-pressed="false" aria-label="Show password"></button></div>
+          <p class="hint-note" id="pass-note">Demo only: don't use a real password.</p>
+          <p class="field__error" id="e-password" hidden></p>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit" id="submit">Sign Up <span id="ico-arrow"></span></button>
+      </form>
+
+      <p class="auth__switch">Already have an account? <a class="auth__link" id="to-signin" href="signin.html">Sign in</a></p>
+    </div>
+  </section>
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/signup.js"></script>
+</body>
+</html>

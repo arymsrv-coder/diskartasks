@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tl"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0b1114;font-family:Inter,system-ui,sans-serif;color:#fff}
+.scene{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column}
+.scene.on{display:flex}
+h1,.big{font-family:Poppins,system-ui,sans-serif;font-weight:800;letter-spacing:-1px}
+.clock{font-family:Poppins;font-weight:800;font-size:260px;color:#ff6b5e;text-shadow:0 0 60px #ff6b5e66}
+.sub{font-family:Poppins;font-weight:600;font-size:64px;margin-top:20px;opacity:.9}
+.glow{position:absolute;width:900px;height:600px;border-radius:50%;background:radial-gradient(#2f5a6680,transparent 70%);bottom:-200px}
+.word{font-family:Poppins;font-weight:800;font-size:200px;line-height:1.05;opacity:0;transform:translateY(40px);transition:all .25s}
+.word.show{opacity:1;transform:none}
+.strike{position:relative}.strike.x::after{content:"";position:absolute;left:-10px;right:-10px;top:52%;height:14px;background:#ff6b5e}
+.feed{width:900px;background:#fff;color:#1c1e21;border-radius:18px;padding:36px;box-shadow:0 30px 80px #000a;font-size:34px}
+.feed .who{font-weight:600;font-size:28px;color:#65676b;margin-bottom:14px}
+.typed{min-height:110px;line-height:1.35}
+.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:#e7f3ff;color:#1877f2;padding:6px 14px;border-radius:10px;font-weight:600;font-size:28px;opacity:0;transform:scale(.7);transition:all .2s}
+.tag.show{opacity:1;transform:none}
+.meta{margin-top:20px;font-size:28px;color:#65676b;height:40px}
+.bubble{margin-top:18px;background:#e4e6eb;border-radius:20px;padding:12px 22px;display:inline-block;font-size:34px;opacity:0;transition:opacity .3s}
+.bubble.show{opacity:1}.ghost{font-size:120px;opacity:0;transition:opacity .6s;margin-top:20px}.ghost.show{opacity:.85}
+.stamp{font-family:Poppins;font-weight:800;font-size:150px;color:#ff6b5e;border:14px solid #ff6b5e;padding:6px 40px;border-radius:14px;transform:rotate(-6deg) scale(2);opacity:0;margin:14px;transition:all .18s}
+.stamp.show{opacity:1;transform:rotate(-6deg) scale(1)}
+.meron{font-family:Poppins;font-weight:800;color:#fff;line-height:1}
+.teal{background:#2F5A66}
+.teal2{background:linear-gradient(#2F5A66,#1d3f49)}
+.logo{font-family:Poppins;font-weight:800;font-size:170px}
+.logo span{color:#f4b942}
+#s9{background:linear-gradient(#0008,#0008),url(../../../images/campus.jpg) center/cover}
+.cap{font-size:46px;font-family:Poppins;font-weight:600;margin-top:24px}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.shake{animation:sh .35s}
+@keyframes sh{20%{transform:translate(-14px,6px)}40%{transform:translate(12px,-8px)}60%{transform:translate(-8px,4px)}80%{transform:translate(6px,-3px)}}
+</style><script>if(new URLSearchParams(location.search).get('v')){var l=document.createElement('link');l.rel='stylesheet';l.href='vert.css';document.head.appendChild(l)}</script></head><body>
+<div class="scene" id="s1"><div class="glow"></div><div class="clock" id="clk">11:00</div><div class="sub">PM · 11 na ng gabi.</div></div>
+<div class="scene" id="s2"><h1 class="big" style="font-size:190px;color:#ff6b5e;text-align:center">BUKAS NA<br>ANG PASAHAN!</h1></div>
+<div class="scene" id="s3"><div class="word" id="w1">TERM PAPER</div><div class="word strike" id="w2">CALCULUS</div><div class="word strike" id="w3" style="color:#ff6b5e">₱₱₱</div></div>
+<div class="scene" id="s4"><h1 class="big" style="font-size:150px">Been there,<br>done that.</h1></div>
+<div class="scene" id="s5" style="background:#18191a"><div class="feed"><div class="who">Group ng mga Estudyante · ngayon lang</div><div class="typed" id="typed"></div><div class="tags" id="tags"></div><div class="meta" id="meta"></div><div class="bubble" id="bub">?</div><div class="ghost" id="gh">👻</div></div></div>
+<div class="scene" id="s6"><div class="stamp" id="st1">WALANG REVIEW</div><div class="stamp" id="st2">WALANG KASIGURADUHAN</div></div>
+<div class="scene" id="s7"><div class="meron" id="m" style="font-size:120px"></div></div>
+<div class="scene teal2" id="s8"><h1 class="big" style="font-size:110px;text-align:center;max-width:1500px;line-height:1.15">Paano kung may isang lugar<br>na para sa <span style="color:#f4b942">atin</span> mismo?</h1></div>
+<div class="scene" id="s9"><div class="logo">Campus <span>Gigs</span></div><div class="cap">Ginawa ng mga estudyante ng SLSU, para sa mga estudyante ng SLSU</div></div>
+<div class="flash" id="fl"></div>
+<script>
+const $=id=>document.getElementById(id);
+function show(n){document.querySelectorAll('.scene').forEach(s=>s.classList.remove('on'));if(n)$('s'+n).classList.add('on');}
+function flash(){const f=$('fl');f.style.transition='none';f.style.opacity=.9;requestAnimationFrame(()=>{f.style.transition='opacity .25s';f.style.opacity=0})}
+const T=[]; const at=(t,fn)=>T.push([t,fn]);
+at(0,()=>show(1));
+at(1.6,()=>{$('clk').textContent='11:00'});
+at(3.5,()=>{show(2);$('s2').classList.add('shake')});
+at(5.7,()=>{show(3)});
+at(6.2,()=>$('w1').classList.add('show'));
+at(9.6,()=>$('w2').classList.add('show'));
+at(10.6,()=>$('w2').classList.add('x'));
+at(12.2,()=>$('w3').classList.add('show'));
+at(13.4,()=>$('w3').classList.add('x'));
+at(17.3,()=>{show(4);flash()});
+at(19.9,()=>{show(5);
+  const txt='Hello po, may tutor ba sa Calculus? Urgent! 🙏';let i=0;
+  const iv=setInterval(()=>{$('typed').textContent=txt.slice(0,++i);if(i>=txt.length)clearInterval(iv)},60);});
+['@kaklase1','@kaibigan','@kakilala ng kakilala','@kahit sino'].forEach((t,k)=>at(24.2+k*1.1,()=>{const s=document.createElement('span');s.className='tag';s.textContent=t;$('tags').appendChild(s);requestAnimationFrame(()=>s.classList.add('show'))}));
+at(28.6,()=>$('meta').textContent='Seen by 47 · 0 replies');
+at(30.2,()=>$('bub').classList.add('show'));
+at(32.4,()=>{$('bub').textContent='magkano ba?';});
+at(34.8,()=>{$('bub').classList.remove('show');$('gh').classList.add('show');$('meta').textContent='Seen · ghosted'});
+at(36.5,()=>{show(6);$('st1').classList.add('show')});
+at(39.4,()=>$('st2').classList.add('show'));
+at(41.9,()=>{show(7);$('m').style.fontSize='150px';$('m').textContent='Akala mo lang wala!'});
+at(43.6,()=>{$('m').style.fontSize='260px';$('m').textContent='PERO MERON!';flash()});
+at(44.7,()=>{$('m').style.fontSize='330px';$('m').textContent='MERON!';flash()});
+at(45.6,()=>{$('s7').style.background='#2F5A66';$('m').style.fontSize='400px';$('m').textContent='MERON!';flash()});
+at(46.8,()=>show(8));
+at(50.3,()=>{show(9);flash()});
+at(59.0,()=>show(0));
+window.begin=()=>{const t0=performance.now();T.forEach(([t,f])=>setTimeout(f,t*1000));window.__t0=t0;return t0};
+</script></body></html>

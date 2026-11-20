@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Gigs | Find skilled SLSU students</title>
+  <meta name="description" content="Campus Gigs is a marketplace where SLSU students buy and sell design, tech, writing, tutoring and admin services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/pages.css">
+<script>try{if(localStorage.getItem('campusgigs.v1.theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body>
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">Campus Gigs</p>
+        <h1 class="display" id="hero-title">Find skilled<br>SLSU students.<br><span class="text-teal">Get things done.</span></h1>
+        <p class="hero__sub">From design to tutoring, Campus Gigs connects you with talented peers on campus.</p>
+        <p class="proof" id="hero-proof"></p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="browse.html">Browse Gigs <span id="ico-arrow"></span></a>
+          <button class="btn btn--accent" type="button" id="become-seller">Become a Seller</button>
+        </div>
+      </div>
+      <div class="collage" aria-label="Students working together">
+        <div class="collage__frame" data-frame="heroFrame1"></div>
+        <div class="collage__frame" data-frame="heroFrame2"></div>
+        <div class="collage__frame" data-frame="heroFrame3"></div>
+        <div class="collage__frame" data-frame="heroFrame4"></div>
+        <div class="collage__sticker" aria-hidden="true">Campus<br>Gigs</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="cats-title">
+    <div class="section__head"><h2 id="cats-title">Popular Categories</h2><a class="link-arrow" href="browse.html">Explore more <span data-ico="arrow-right" data-size="18"></span></a></div>
+    <div class="cat-grid" id="categories"></div>
+  </section>
+
+  <section class="section container" aria-labelledby="top-title">
+    <div class="section__head"><h2 id="top-title">Top-Rated Gigs</h2><a class="link-arrow" href="browse.html?sort=top">See all <span data-ico="arrow-right" data-size="18"></span></a></div>
+    <div class="gig-grid" id="top-rated"></div>
+  </section>
+
+  <section class="section container" aria-labelledby="now-title">
+    <div class="section__head"><h2 id="now-title">Popular right now</h2></div>
+    <div class="spec-grid" id="popular-now"></div>
+  </section>
+
+  <section class="section container" aria-labelledby="how-title">
+    <div class="how">
+      <div class="steps-card">
+        <h2 id="how-title" style="margin-bottom:20px">How Campus Gigs works</h2>
+        <div class="steps-card__step"><span class="steps-card__icon" data-ico="search" data-size="20"></span><div><h3>Find what you need</h3><p>Browse gigs from verified SLSU students and compare packages and reviews.</p></div></div>
+        <div class="steps-card__step"><span class="steps-card__icon" data-ico="handshake" data-size="20"></span><div><h3>Connect with the seller</h3><p>Message them, agree on the details and place your order.</p></div></div>
+        <div class="steps-card__step"><span class="steps-card__icon" data-ico="check-circle" data-size="20"></span><div><h3>Get it done</h3><p>Meet on campus, receive your work and leave an honest review.</p></div></div>
+      </div>
+      <div class="media-card on-dark">
+        <div class="media-card__img" id="how-media"><button class="media-card__play" type="button" id="how-play" aria-label="Play the how-it-works video"></button></div>
+        <p class="media-card__title">See how it works</p>
+        <p class="media-card__sub">Watch how it all comes together, from search to review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="why-title">
+    <div class="band band--olive why">
+      <h2 id="why-title" class="why__title">Why Choose Campus Gigs?</h2>
+      <div class="why__items">
+        <div class="why__item"><span data-ico="shield-check" data-size="32"></span><h3>Verified Students</h3><p>Work with verified SLSU students in a safe and friendly community.</p></div>
+        <div class="why__item"><span data-ico="zap" data-size="32"></span><h3>Affordable Rates</h3><p>Get quality services at student-friendly prices.</p></div>
+        <div class="why__item"><span data-ico="handshake" data-size="32"></span><h3>Support Your Peers</h3><p>Help your fellow SLSU students grow and succeed.</p></div>
+      </div>
+      <a class="btn btn--primary why__cta" href="browse.html">Start Browsing <span data-ico="arrow-right" data-size="20"></span></a>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="compare-title">
+    <h2 id="compare-title" style="margin-bottom:20px">Why students pick Campus Gigs</h2>
+    <div class="table-scroll"><div class="compare" role="table" aria-label="Campus Gigs compared with Facebook groups and word of mouth">
+      <div class="compare__head" role="row"><span role="columnheader"></span><span role="columnheader">Verified students</span><span role="columnheader">Order tracking</span><span role="columnheader">Ratings and reviews</span><span role="columnheader">Meet-up payment</span></div>
+      <div class="compare__row compare__row--us" role="row"><div class="compare__who" role="rowheader"><strong>Campus Gigs</strong><p>One place for SLSU students to buy and sell services safely.</p></div><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span></div>
+      <div class="compare__row" role="row"><div class="compare__who" role="rowheader"><strong>Facebook groups</strong><p>Lots of posts, but no verification and no order history.</p></div><span role="cell" class="no" aria-label="No" data-ico="x-circle" data-size="24"></span><span role="cell" class="no" aria-label="No" data-ico="x-circle" data-size="24"></span><span role="cell" class="no" aria-label="No" data-ico="x-circle" data-size="24"></span><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span></div>
+      <div class="compare__row" role="row"><div class="compare__who" role="rowheader"><strong>Word of mouth</strong><p>Trusted, but slow, and hard to find the right person.</p></div><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span><span role="cell" class="no" aria-label="No" data-ico="x-circle" data-size="24"></span><span role="cell" class="no" aria-label="No" data-ico="x-circle" data-size="24"></span><span role="cell" class="yes" aria-label="Yes" data-ico="check-circle" data-size="24"></span></div>
+    </div></div>
+  </section>
+
+  <section class="section container" id="community" aria-labelledby="community-title">
+    <h2 id="community-title" style="margin-bottom:20px">What Our Community Says</h2>
+    <div class="community">
+      <div class="quote-card" role="group" aria-roledescription="carousel" aria-label="Student testimonials" id="carousel">
+        <div id="slides"></div>
+        <div class="carousel-controls">
+          <button class="carousel-toggle" id="carousel-toggle" type="button" aria-label="Pause testimonial rotation"></button>
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+      <div class="campus-photo" id="campus-photo"><p class="campus-photo__text" aria-hidden="true">Campus gigs,<br>handled.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-label="Student organisations that use Campus Gigs">
+    <div class="logo-row"><span class="logo-row__eyebrow">Trusted by SLSU student orgs</span><div class="logo-row__list"><span class="logo-row__item">SLSU Student Council</span><span class="logo-row__item">College of Engineering</span><span class="logo-row__item">Junior IT Society</span><span class="logo-row__item">Campus Press</span><span class="logo-row__item">Business Club</span></div></div>
+  </section>
+
+  <section class="section container" aria-labelledby="cta-title">
+    <div class="band band--deep cta-wide on-dark">
+      <span class="cta-wide__icon" data-ico="send" data-size="56"></span>
+      <div class="cta-wide__text"><h2 id="cta-title">Ready to get started?</h2><p>Join Campus Gigs today and connect with fellow SLSU students.</p></div>
+      <a class="btn btn--light" id="cta-btn" href="signup.html">Sign Up Free <span data-ico="arrow-right" data-size="20"></span></a>
+    </div>
+  </section>
+
+</main>
+<script src="js/util.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages/home.js"></script>
+</body>
+</html>
