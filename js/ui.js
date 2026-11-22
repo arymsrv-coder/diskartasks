@@ -320,9 +320,9 @@
 
   // ------------------------------------------------------------------ placeholder policy modals
   var POLICIES = {
-    privacy: ['Privacy Policy (demo)', '<div class="prose"><p>Campus Gigs is a course project. Everything you enter stays in this browser: nothing is sent to a server, sold or shared.</p><h2>What is stored</h2><ul><li>Your demo account, orders, messages and favorites, in your browser’s storage.</li><li>Nothing else. You can erase it any time with Reset demo data in Settings.</li></ul></div>'],
+    privacy: ['Privacy Policy (demo)', '<div class="prose"><p>DiskarTasks is a course project. Everything you enter stays in this browser: nothing is sent to a server, sold or shared.</p><h2>What is stored</h2><ul><li>Your demo account, orders, messages and favorites, in your browser’s storage.</li><li>Nothing else. You can erase it any time with Reset demo data in Settings.</li></ul></div>'],
     terms: ['Terms of Service (demo)', '<div class="prose"><p>This is a demo for a UI/UX course, so there is no real contract and no real payment.</p><ul><li>Be kind and honest with fellow students.</li><li>Do not enter a real password. Accounts here are not secure.</li><li>Orders are marked “Pay on meet-up (demo)” and no money moves.</li></ul></div>'],
-    accessibility: ['Accessibility', '<div class="prose"><p>Campus Gigs is built to be used with a keyboard, a screen reader and at any screen size.</p><ul><li>Every control has a visible focus ring and a text label.</li><li>Pop-ups trap focus and close with Esc.</li><li>Text meets a 4.5:1 contrast ratio, including text on photos, and the pages reflow to a 320 px wide screen without side-scrolling.</li><li>Photos have descriptions for screen readers, and form errors are read out with the field they belong to.</li><li>A light/dark switch in the header changes the palette; both palettes keep text above 4.5:1.</li><li>The testimonial carousel has a Pause button, and it stays still if your system asks for reduced motion.</li></ul><p>Found a problem? Write to us through the <a href="about.html#contact">contact form</a>.</p></div>'],
+    accessibility: ['Accessibility', '<div class="prose"><p>DiskarTasks is built to be used with a keyboard, a screen reader and at any screen size.</p><ul><li>Every control has a visible focus ring and a text label.</li><li>Pop-ups trap focus and close with Esc.</li><li>Text meets a 4.5:1 contrast ratio, including text on photos, and the pages reflow to a 320 px wide screen without side-scrolling.</li><li>Photos have descriptions for screen readers, and form errors are read out with the field they belong to.</li><li>A light/dark switch in the header changes the palette; both palettes keep text above 4.5:1.</li><li>The testimonial carousel has a Pause button, and it stays still if your system asks for reduced motion.</li></ul><p>Found a problem? Write to us through the <a href="about.html#contact">contact form</a>.</p></div>'],
     guidelines: ['Seller guidelines (demo)', '<div class="prose"><p>A few habits that earn five-star reviews.</p><ul><li>Describe each package honestly and keep delivery days realistic.</li><li>Reply to messages within a day.</li><li>Meet buyers in public campus spaces.</li><li>Mark an order completed once the buyer has your work.</li></ul></div>'],
     sitemap: ['Sitemap', '<ul class="prose" style="list-style:none;padding:0"><li><a href="index.html">Home</a></li><li><a href="browse.html">Browse Gigs</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About &amp; Contact</a></li><li><a href="signin.html">Sign In</a></li><li><a href="signup.html">Sign Up</a></li><li><a href="profile.html">My Profile</a></li><li><a href="messages.html">Messages</a></li><li><a href="post-gig.html">Post a gig</a></li></ul>']
   };
@@ -381,7 +381,7 @@
       actions = '<a class="btn btn--outline btn--sm" href="signin.html">Sign In</a><a class="btn btn--amber btn--sm" href="signup.html">Sign Up</a>';
     }
     return '<header class="site-header" id="site-header"><div class="container site-header__inner">' +
-      '<a class="logo" href="index.html" aria-label="Campus Gigs home">' + Icons.logo(40) + '</a>' +
+      '<a class="logo" href="index.html" aria-label="DiskarTasks home">' + Icons.logo(48) + '</a>' +
       '<nav class="nav" aria-label="Primary"><div class="nav__item" id="nav-browse"><a class="nav__link" href="browse.html"' + (page === 'browse' ? ' aria-current="page"' : '') + '>Browse Gigs</a>' +
       '<button class="nav__chev" type="button" id="mega-btn" aria-expanded="false" aria-controls="mega" aria-label="Browse categories">' + icon('chevron-down', 18) + '</button></div>' +
       navLink('pricing.html', 'Pricing', 'pricing', page) + navLink('about.html', 'About &amp; Contact', 'about', page) + '</nav>' +
@@ -409,7 +409,7 @@
   function themeButtonHtml() { return '<button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Dark mode" aria-pressed="false"></button>'; }
 
   function appBarHtml() {
-    return '<div class="appbar" id="appbar"><div class="container appbar__inner"><a class="logo logo--sm" href="index.html" aria-label="Campus Gigs home">' + Icons.logo(32) + '</a>' +
+    return '<div class="appbar" id="appbar"><div class="container appbar__inner"><a class="logo logo--sm" href="index.html" aria-label="DiskarTasks home">' + Icons.logo(38) + '</a>' +
       '<div class="appbar__actions">' + themeButtonHtml() + '<button class="icon-btn" type="button" data-open-menu="search" aria-label="Search gigs">' + icon('search', 22) + '</button>' +
       '<button class="icon-btn" type="button" data-open-menu aria-label="Open menu" aria-haspopup="dialog">' + icon('menu', 24) + '</button></div></div></div>';
   }
@@ -437,9 +437,9 @@
       return '<button class="social" type="button" data-social="' + s[1] + '" aria-label="' + s[1] + '">' + icon(s[0], 20) + '</button>';
     }).join('');
     return '<footer class="site-footer on-dark"><div class="container">' +
-      '<div class="site-footer__top"><div class="site-footer__brand"><a class="logo logo--light" href="index.html" aria-label="Campus Gigs home">' + Icons.logo(48) + '</a>' +
-      '<p class="site-footer__tag">Made for campus. Made for each other.</p><div class="site-footer__follow"><span>Follow Us</span><div class="socials">' + social + '</div></div></div>' +
-      '<form class="newsletter" novalidate><label class="newsletter__label" for="nl-email">Get the latest updates</label><p class="newsletter__hint">Stay in the loop with Campus Gigs.</p>' +
+      '<div class="site-footer__top"><div class="site-footer__brand"><a class="logo logo--light" href="index.html" aria-label="DiskarTasks home">' + Icons.logo(56) + '</a>' +
+      '<p class="site-footer__tag">Aral sa Umaga, Diskarte All Day—The Free-Yuyan Way.</p><div class="site-footer__follow"><span>Follow Us</span><div class="socials">' + social + '</div></div></div>' +
+      '<form class="newsletter" novalidate><label class="newsletter__label" for="nl-email">Get the latest updates</label><p class="newsletter__hint">Stay in the loop with DiskarTasks.</p>' +
       '<div class="newsletter__row"><input class="input" id="nl-email" type="email" placeholder="Enter your email" autocomplete="email"><button class="btn btn--light btn--icon" type="submit" aria-label="Subscribe">' + icon('arrow-right', 22) + '</button></div>' +
       '<p class="newsletter__msg" role="status" aria-live="polite"></p></form></div>' +
       '<div class="site-footer__cols">' +
@@ -447,7 +447,7 @@
       group('For Sellers', [{ href: becomeSellerHref(user), label: 'Become a Seller' }, { href: 'post-gig.html', label: 'Post a gig' }, { href: 'pricing.html?for=sellers', label: 'Seller fees' }, { policy: 'guidelines', label: 'Seller guidelines' }]) +
       group('Resources', [{ href: 'about.html#contact', label: 'Help &amp; support' }, { href: 'about.html#faq', label: 'FAQ' }, { href: 'index.html#community', label: 'Success stories' }]) +
       group('Company', [{ href: 'about.html', label: 'About Us' }, { href: 'about.html#contact', label: 'Contact Us' }]) + '</div>' +
-      '<div class="site-footer__legal"><p>© 2026 Campus Gigs. All rights reserved.</p><div><button type="button" data-policy="privacy">Privacy Policy</button><button type="button" data-policy="terms">Terms of Service</button>' +
+      '<div class="site-footer__legal"><p>© 2026 DiskarTasks. All rights reserved.</p><div><button type="button" data-policy="privacy">Privacy Policy</button><button type="button" data-policy="terms">Terms of Service</button>' +
       '<button type="button" data-policy="accessibility">Accessibility</button><button type="button" data-policy="sitemap">Sitemap</button><a href="images/CREDITS.txt">Photo credits</a></div></div></div></footer>';
   }
 

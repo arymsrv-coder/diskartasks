@@ -18,7 +18,7 @@
   var owner = !!viewer && viewer.handle === gig.sellerHandle;
   var cat = Store.categories().filter(function (c) { return c.id === gig.category; })[0];
   var perHour = gig.unit === 'hour';
-  document.title = gig.title + ' | Campus Gigs';
+  document.title = gig.title + ' | DiskarTasks';
 
   // coming from Post a gig: confirm the save once, then tidy the address bar
   if (q.get('posted') === '1' || q.get('saved') === '1') {

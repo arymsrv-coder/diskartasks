@@ -24,11 +24,12 @@
   document.getElementById('campus-photo').insertAdjacentHTML('afterbegin', UI.tile(SEED.images.campus, 'The SLSU campus'));
   document.getElementById('how-media').insertAdjacentHTML('afterbegin', UI.tile(SEED.images.campusWalk, 'Students walking along a campus path'));
 
-  // Proof row: a few real sellers and a count taken from the seed
-  var reviews = Store.allGigs().reduce(function (n, g) { return n + g.ratingCount; }, 0);
+  // Proof row: a few sample sellers and counts taken from the demo data (no invented figures)
+  var gigsAll = Store.allGigs();
+  var sellerCount = Object.keys(gigsAll.reduce(function (m, g) { m[g.sellerHandle] = 1; return m; }, {})).length;
   var proofUsers = ['paolo_d', 'bea_s', 'jaya_r'].map(Store.getUser).filter(Boolean);
   document.getElementById('hero-proof').innerHTML = '<span class="avatar-stack">' + proofUsers.map(function (u) { return UI.avatar(u, 28); }).join('') + '</span>' +
-    '<span>' + (Math.floor(reviews / 100) * 100).toLocaleString('en-US') + '+ gigs completed, rated and reviewed</span>';
+    '<span>' + gigsAll.length + ' sample gigs from ' + sellerCount + ' student sellers (demo)</span>';
 
   // Popular Categories
   document.getElementById('categories').innerHTML = Store.categories().map(function (c) {
@@ -57,7 +58,7 @@
   // Video placeholder
   document.getElementById('how-play').addEventListener('click', function () {
     UI.modal({
-      title: 'How Campus Gigs works',
+      title: 'How DiskarTasks works',
       body: '<p>This demo has no video, so here is the whole story in three steps.</p><ol class="prose" style="list-style:decimal;padding-left:22px;margin-top:12px"><li><strong>Find</strong> a gig from a verified SLSU student.</li><li><strong>Connect</strong> by message and place your order.</li><li><strong>Get it done</strong> on campus, then leave a review.</li></ol>',
       actions: [{ label: 'Browse Gigs', variant: 'primary', onClick: function () { location.href = 'browse.html'; return false; } }, { label: 'Close' }]
     });

@@ -4,10 +4,14 @@
 /* ---- Logo ---- */
 .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--deep); text-decoration: none; }
 .logo__text { font: 600 18px/1.05 var(--font-head); }
-.logo__g { stroke: var(--teal); }
+.logo__mark { display: block; flex: none; object-fit: contain; }
+.logo__mark--dark { display: none; }
+:root[data-theme="dark"] .logo__mark--light { display: none; }
+:root[data-theme="dark"] .logo__mark--dark { display: block; }
 .logo--sm .logo__text { font-size: 16px; }
 .logo--light { color: var(--ivory); }
-.logo--light .logo__g { stroke: var(--olive); }
+.logo--light .logo__mark--light { display: none; }
+.logo--light .logo__mark--dark { display: block; }
 
 /* ---- Storage notice (only when localStorage is blocked or per-file) ---- */
 .storage-notice { padding: 10px var(--gutter); background: var(--olive); color: var(--deep); font: 500 14px/20px var(--font-body); text-align: center; }

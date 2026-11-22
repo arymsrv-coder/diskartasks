@@ -18,7 +18,7 @@
   var perHour = gig.unit === 'hour';
   var pkg = gig.packages.filter(function (p) { return p.name === q.get('pkg'); })[0] || gig.packages[0];   // an unknown package falls back to the first
   var qty = 1;
-  document.title = 'Order: ' + gig.title + ' | Campus Gigs';
+  document.title = 'Order: ' + gig.title + ' | DiskarTasks';
 
   $('order-crumbs').innerHTML = UI.breadcrumb([
     { label: 'Browse Gigs', href: 'browse.html' },

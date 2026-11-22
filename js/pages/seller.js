@@ -36,7 +36,7 @@
     return '<span class="stars stars--five" role="img" aria-label="' + n + ' out of 5 stars">' + out + '</span>';
   }
 
-  document.title = seller.name + ' (@' + seller.handle + ') | Campus Gigs';
+  document.title = seller.name + ' (@' + seller.handle + ') | DiskarTasks';
   $('pf-arrow').innerHTML = Icons.svg('arrow-right', { size: 18 });
   $('gigs-title').textContent = owner ? 'My Gigs' : 'Gigs';
   if (owner) $('orders').hidden = false;
@@ -185,7 +185,7 @@
 
   // ---------- welcome banner
   if (owner && q.get('welcome') === '1') {
-    $('welcome-slot').innerHTML = '<div class="welcome-banner" role="status"><div><h2>Welcome to Campus Gigs!</h2><p>Your seller page is ready. Post your first gig so students can find you.</p></div><a class="btn btn--primary" href="post-gig.html">Post your first gig</a></div>';
+    $('welcome-slot').innerHTML = '<div class="welcome-banner" role="status"><div><h2>Welcome to DiskarTasks!</h2><p>Your seller page is ready. Post your first gig so students can find you.</p></div><a class="btn btn--primary" href="post-gig.html">Post your first gig</a></div>';
   }
 
   // ---------- follow the scroll

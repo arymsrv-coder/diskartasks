@@ -1,5 +1,5 @@
 IMAGES
-Every picture on the site is a real photo in this folder (43 files). They are crops of the eleven source
+Every picture on the site is a real photo in this folder (51 files). They are crops of the eleven source
 photos supplied by the project owner; images/CREDITS.txt lists each file. The footer's "Photo credits" link opens it.
 
 WHAT EACH FILE IS FOR (names are set in js/data.js)
@@ -12,6 +12,7 @@ campus-3.jpg                      a campus walkway (the "How it works" card on H
 banner.jpg                        the wide banner behind "Browse Gigs" and the profile cover strips
 gig-01.jpg .. gig-18.jpg          the cover of each of the 18 sample gigs (gig-NN is gig number NN)
 work-<seller>-<n>.jpg             portfolio pieces on the seller pages (12 files)
+team-<name>.jpg                   the eight team portraits on the About page (set in SEED.team in js/data.js)
 
 New gigs start from one of six category photos (gig-01, gig-03, gig-06, gig-13, gig-16 and gig-18); sellers can also
 upload their own cover on the Post a gig page, which is resized in the browser and stored in their browser only.

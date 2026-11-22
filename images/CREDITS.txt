@@ -1,4 +1,4 @@
-PHOTO CREDITS: Campus Gigs
+PHOTO CREDITS: DiskarTasks
 
 All photos on the site were supplied by the project owner (eleven source pictures, used with permission for this
 project). Each file below is a crop or resize of one of those pictures; the people shown are not the (fictional)
@@ -178,3 +178,35 @@ work-rhea-1.jpg
 work-saye-1.jpg
     Used for : An open sketchbook filled with hand-drawn logo concepts.
     Source   : project owner
+
+team-arym.jpg
+    Used for : Portrait of Arym Sherwin R. Vendiola, Fullstack Developer (Leader), on the About page.
+    Source   : supplied by Arym for this project (resized and cropped square)
+
+team-brent.jpg
+    Used for : Portrait of Brent Paul O. Mecija, UI/UX Developer, on the About page.
+    Source   : supplied by Brent for this project (resized and cropped square)
+
+team-kharl.jpg
+    Used for : Portrait of Kharl Christian D. Dirain, UI/UX Developer, on the About page.
+    Source   : supplied by Kharl for this project (resized and cropped square)
+
+team-david.jpg
+    Used for : Portrait of David Andrew S. Casao, Business Concept Developer, on the About page.
+    Source   : supplied by David for this project (resized and cropped square)
+
+team-marvel.jpg
+    Used for : Portrait of Marvel Achilles E. De Lumban, Content Manager, on the About page.
+    Source   : supplied by Marvel for this project (resized and cropped square)
+
+team-felix.jpg
+    Used for : Portrait of John Felix A. Sante, Marketing / Promotion Specialist, on the About page.
+    Source   : supplied by John for this project (resized and cropped square)
+
+team-cj.jpg
+    Used for : Portrait of Ryan CJ S. Peñaranda, Marketing / Promotion Specialist, on the About page.
+    Source   : supplied by Ryan for this project (resized and cropped square)
+
+team-yosefa.jpg
+    Used for : Portrait of Yosefa Perry R. Paroan, Marketing / Promotion Specialist, on the About page.
+    Source   : supplied by Yosefa for this project (resized and cropped square)

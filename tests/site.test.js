@@ -73,6 +73,7 @@ test('every photo the seed refers to exists in images/, is credited, and none is
   const grab = v => { const m = /^img:([\w.\-]+)$/.exec(String(v)); if (m) refs.add(m[1]); };
   Object.values(SEED.images).forEach(grab);
   Object.values(SEED.categoryCovers).forEach(grab);
+  (SEED.team || []).forEach(m => grab(m.photo));
   SEED.gigs.forEach(g => grab(g.cover));
   SEED.users.forEach(u => (u.portfolio || []).forEach(p => grab(p.cover)));
   ok(refs.size >= 40, 'expected the seed to use at least 40 photos, found ' + refs.size);

@@ -1,4 +1,4 @@
-CAMPUS GIGS
+DISKARTASKS
 A marketplace where SLSU students buy and sell services.
 This is a UI/UX course project. Everything you see is demo data.
 
@@ -42,7 +42,7 @@ profile.html     Your profile, orders, favorites, reviews and settings
 messages.html    Your conversations
 post-gig.html    Post or edit a gig
 pricing.html     Plans for buyers and sellers
-about.html       About, how it works, FAQ and the contact form (#contact)
+about.html       About: story, mission, vision, values, the problem and solution, the team, FAQ, and the contact form (#contact)
 signin.html      Sign in
 signup.html      Sign up
 
@@ -52,8 +52,15 @@ pastel category tiles. The moon/sun button in the header (and the top bar on pho
 (deep teal header, hero and panels with olive-yellow buttons). The choice is remembered in your browser.
 Colours live in css/tokens.css; the dark palette is the block at the end of that file.
 
+BRAND
+The logo is in brand/: logo.png (for light backgrounds), logo-dark.png (the navy parts turned cream, used in dark mode
+and in the footer), favicon.png and apple-touch-icon.png. js/icons.js (Icons.logo) puts the logo and the name
+"DiskarTasks" in the header, app bar and footer. Main colours: green #017A3F (primary buttons), deep navy #082743 (text),
+forest #082E34 (footer and dark bands), teal #0B6B4F (links and accents). All are in css/tokens.css.
+Tagline: "Aral sa Umaga, Diskarte All Day—The Free-Yuyan Way."
+
 IMAGES
-All pictures are cropped from the eleven photos supplied by the project owner (images/ has 43 files).
+All pictures are cropped from the eleven photos supplied by the project owner (images/ has 43 files, plus 8 team portraits supplied by the team members).
 images/CREDITS.txt lists them (also linked from the footer, "Photo credits"); images/README.txt explains which
 file is used where and how to swap one.
 

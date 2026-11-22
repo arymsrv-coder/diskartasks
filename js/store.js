@@ -1,4 +1,4 @@
-/* Store: all domain logic and persistence for Campus Gigs. DOM-free so it can be unit-tested in Node.
+/* Store: all domain logic and persistence for DiskarTasks. DOM-free so it can be unit-tested in Node.
    Mutating calls return {ok:true, ...} or {ok:false, error}; they never throw on bad user input. */
 (function (root) {
   'use strict';

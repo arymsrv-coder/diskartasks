@@ -15,7 +15,7 @@ test('demo buyer', () => { const u = Store.getUser('juana.delacruz'); ok(u && !u
 test('demo seller', () => { const u = Store.getUser('paolo_d'); eq([u.isSeller,u.rating,u.ratingCount,u.joined,u.skills], [true,4.8,87,'2025-03',['Graphic Design','Canva','Photo Editing','Branding']]); });
 test('demo credentials exist and are 8+ chars', () => { const d = Store.demoAccounts(); ok(d.buyer.password.length>=8 && d.seller.password.length>=8); });
 test('image slots are set', () => ok(['heroFrame1','heroFrame4','aboutCollage1','aboutCollage4','campus','banner'].every(k => /^(tile|img):/.test(SEED.images[k]))));
-test('testimonials and faq', () => { eq(Store.testimonials().length, 4); ok(Store.testimonials()[0].quote.includes('Campus Gigs made it so easy to get my logo for our capstone')); eq(Store.faq().length, 3); });
+test('testimonials and faq', () => { eq(Store.testimonials().length, 4); ok(Store.testimonials()[0].quote.includes('DiskarTasks made it so easy to get my logo for our capstone')); eq(Store.faq().length, 3); });
 // Rewritten after the final review: the original three could pass even if init() always reseeded.
 // A control (valid data survives a second init) plus a marker user prove which branch ran.
 const keeper = opts => { const a = boot(opts); a.Store.signUp({name:'Keeper', email:'keeper@slsu.edu.ph', password:'12345678', role:'buyer'}); return a; };

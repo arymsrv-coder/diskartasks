@@ -36,7 +36,7 @@
     return;
   }
 
-  if (editing) { document.title = 'Edit gig | Campus Gigs'; $('page-title').textContent = 'Edit gig'; $('publish').textContent = 'Save changes'; }
+  if (editing) { document.title = 'Edit gig | DiskarTasks'; $('page-title').textContent = 'Edit gig'; $('publish').textContent = 'Save changes'; }
 
   // ---------- state
   var state = {

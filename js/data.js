@@ -1,4 +1,4 @@
-/* SEED: all mock content for Campus Gigs. Everything on the site comes from here (or from what a visitor creates).
+/* SEED: all mock content for DiskarTasks. Everything on the site comes from here (or from what a visitor creates).
    Orders, reviews, favorites, follows and conversations are added further down by their own sections. */
 (function (root) {
   'use strict';
@@ -217,15 +217,27 @@
     favorites: {},
     follows: {},
 
+    // The team behind DiskarTasks (names, roles and school emails only; shown on the About page).
+    team: [
+      { id: "arym", name: "Arym Sherwin R. Vendiola", role: "Fullstack Developer (Leader)", email: "avendiola@slsu.edu.ph", photo: 'img:team-arym.jpg', duty: "Built all 12 pages, the shared shell, the data layer, dark mode and the automated tests." },
+      { id: "brent", name: "Brent Paul O. Mecija", role: "UI/UX Developer", email: "", photo: 'img:team-brent.jpg', duty: "Designed the page mockups, mapped the buyer and seller flows and reviewed the build against the designs." },
+      { id: "kharl", name: "Kharl Christian D. Dirain", role: "UI/UX Developer", email: "kdirain@slsu.edu.ph", photo: 'img:team-kharl.jpg', duty: "Created the UI asset kit (colours, type, components) and the phone and tablet layouts." },
+      { id: "david", name: "David Andrew S. Casao", role: "Business Concept Developer", email: "dcasao@slsu.edu.ph", photo: 'img:team-david.jpg', duty: "Defined the business idea, user segments, six categories, package model and trust rules." },
+      { id: "marvel", name: "Marvel Achilles E. De Lumban", role: "Content Manager", email: "malumban@slsu.edu.ph", photo: 'img:team-marvel.jpg', duty: "Wrote the site copy, gig descriptions, FAQs and narration scripts, and the image descriptions." },
+      { id: "felix", name: "John Felix A. Sante", role: "Marketing / Promotion Specialist", email: "", photo: 'img:team-felix.jpg', duty: "Runs the social campaign: Facebook groups, Reels and TikToks, and post boosting." },
+      { id: "cj", name: "Ryan CJ S. Peñaranda", role: "Marketing / Promotion Specialist", email: "rpenaranda@slsu.edu.ph", photo: 'img:team-cj.jpg', duty: "Runs the QR flyers, the campus demo booth and student organisation outreach." },
+      { id: "yosefa", name: "Yosefa Perry R. Paroan", role: "Marketing / Promotion Specialist", email: "ypparoan@slsu.edu.ph", photo: 'img:team-yosefa.jpg', duty: "Recruits early freelancers, runs guided walkthroughs and tracks feedback." },
+    ],
+
     testimonials: [
-      { name: 'Ana Santos', role: 'SLSU Student', quote: 'Campus Gigs made it so easy to get my logo for our capstone. Highly recommended!' },
+      { name: 'Ana Santos', role: 'SLSU Student', quote: 'DiskarTasks made it so easy to get my logo for our capstone. Highly recommended!' },
       { name: 'Marco Villanueva', role: 'BS Information Technology', quote: 'I booked a tutor for Calculus the same afternoon. Fast replies and fair prices.' },
       { name: 'Liza Ramos', role: 'BS Education', quote: 'As a seller I got my first three orders in a week. It feels like a campus community, not a faceless site.' },
       { name: 'Carlo Reyes', role: 'BS Business Administration', quote: 'The reviews helped me pick the right designer for our org posters. Great value.' }
     ],
 
     faq: [
-      { q: 'Is Campus Gigs free to use?', a: 'Yes. Browsing, messaging and ordering are free. Sellers set their own prices and meet buyers on campus to complete the gig.' },
+      { q: 'Is DiskarTasks free to use?', a: 'Yes. Browsing, messaging and ordering are free. Sellers set their own prices and meet buyers on campus to complete the gig.' },
       { q: 'How do I become a seller?', a: 'Sign up with your SLSU email, choose Freelancer (Seller), then post your first gig from your seller page.' },
       { q: 'Is it safe to transact here?', a: 'Every member is a verified SLSU student, orders are tracked in the app and payment happens when you meet on campus. This demo does not take real payments.' }
     ],
@@ -280,6 +292,14 @@
     // The starting cover for a new gig in each category (the Post a gig page offers these six). Falls back to the tile.
     // What each photo shows, for screen readers (used where the picture is content, e.g. the big picture on a gig page).
     photoAlt: {
+      'team-arym.jpg': 'Portrait of Arym Sherwin R. Vendiola, Fullstack Developer (Leader).',
+      'team-brent.jpg': 'Portrait of Brent Paul O. Mecija, UI/UX Developer.',
+      'team-kharl.jpg': 'Portrait of Kharl Christian D. Dirain, UI/UX Developer.',
+      'team-david.jpg': 'Portrait of David Andrew S. Casao, Business Concept Developer.',
+      'team-marvel.jpg': 'Portrait of Marvel Achilles E. De Lumban, Content Manager.',
+      'team-felix.jpg': 'Portrait of John Felix A. Sante, Marketing / Promotion Specialist.',
+      'team-cj.jpg': 'Portrait of Ryan CJ S. Peñaranda, Marketing / Promotion Specialist.',
+      'team-yosefa.jpg': 'Portrait of Yosefa Perry R. Paroan, Marketing / Promotion Specialist.',
       'about-1.jpg': 'A designer’s wooden desk with a laptop showing logo work, a sketchbook and a mug.',
       'about-2.jpg': 'A laptop screen full of code on a dark wooden desk.',
       'about-3.jpg': 'A brand identity guidelines flat lay with colour swatches and a tablet.',
@@ -472,7 +492,7 @@
       ]
     },
     faq: [
-      { q: 'Do I have to pay to use Campus Gigs?', a: 'No. Browsing, messaging, ordering and selling are free. The paid plans only add extras, and in this demo no payment is ever taken.' },
+      { q: 'Do I have to pay to use DiskarTasks?', a: 'No. Browsing, messaging, ordering and selling are free. The paid plans only add extras, and in this demo no payment is ever taken.' },
       { q: 'How does payment work between students?', a: 'Orders are marked "Pay on meet-up (demo)": buyer and seller agree where to meet, and any payment happens in person. The site never touches money.' },
       { q: 'Is a service fee taken from my earnings?', a: 'Sellers on Starter would pay a 5% service fee and Pro sellers 0%. These figures are placeholders for the course project.' },
       { q: 'Can I switch plans later?', a: 'Yes. You can move between plans at any time, and your orders, reviews and messages stay with your account.' }

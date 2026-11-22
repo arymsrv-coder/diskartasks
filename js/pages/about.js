@@ -34,10 +34,33 @@
   UI.accordion(document.getElementById('faq-acc'));
   UI.accordion(document.getElementById('profile-acc'));
 
+  // core values
+  var VALUES = [
+    ['Fairness', 'Equal opportunity where every skill counts, from logo design and tutoring to event photography, backed by transparent dealings.'],
+    ['Reliability', 'Built on trust through verified SLSU members, honest peer reviews, and tracked orders from start to finish.'],
+    ['Empowerment', 'Turning everyday student talents into real income, practical experience, and career-ready portfolios.'],
+    ['Excellence', 'Delivering quality, dependable work that reflects the standard and work ethic of SLSU students.'],
+    ['Youth-Driven', 'Designed around campus life, giving students the flexibility to balance academics and freelancing.'],
+    ['Unity', 'A genuine community where students support students and nobody is just a faceless account.'],
+    ['Yielding Results', 'Focused on real outcomes: fast, reliable solutions for clients and measurable skill growth for freelancers.'],
+    ['Affordability', 'Student-friendly rates built for a campus budget, with sample gigs from ₱200 to ₱1,500.'],
+    ['Network', 'Fostering real peer-to-peer connections across SLSU that open doors long after a task is completed.']
+  ];
+  document.getElementById('values').innerHTML = VALUES.map(function (v, i) {
+    return '<li class="value"><span class="value__n" aria-hidden="true">' + (i + 1) + '</span><h3>' + esc(v[0]) + '</h3><p>' + esc(v[1]) + '</p></li>';
+  }).join('');
+
+  // the team: photo, name, role, what they do and a school email when there is one
+  document.getElementById('team-grid').innerHTML = SEED.team.map(function (m) {
+    return '<li class="member"><div class="member__photo">' + UI.tile(m.photo, null) + '</div>' +
+      '<h3>' + esc(m.name) + '</h3><p class="member__role">' + esc(m.role) + '</p><p class="member__duty">' + esc(m.duty) + '</p>' +
+      (m.email ? '<a class="member__mail" href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a>' : '') + '</li>';
+  }).join('');
+
   // closing call to action: a card beside a campus photo
   document.getElementById('about-cta-photo').innerHTML = UI.tile(SEED.images.campusSunset, 'SLSU campus buildings in golden evening light');
   document.getElementById('about-cta-card').innerHTML = UI.ctaBand({
-    title: 'Ready to get started?', text: 'Join Campus Gigs today and be part of our growing community.',
+    title: 'Ready to get started?', text: 'Join DiskarTasks today and be part of our growing community.',
     label: 'Browse Gigs', href: 'browse.html', variant: 'card'
   });
 

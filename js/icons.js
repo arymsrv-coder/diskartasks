@@ -81,13 +81,12 @@
 
     names: function () { return Object.keys(P); },
 
-    // The Campus Gigs lockup: a C and a G drawn together, then the two-line name. Colours come from CSS (see .logo in shell.css).
+    // The DiskarTasks lockup: the logo image (a light-mode and a dark-mode version; CSS shows one, see .logo in shell.css) and the name.
     logo: function (size) {
       var s = Number(size) > 0 ? Number(size) : 40;
-      return '<svg class="logo__mark" width="' + s + '" height="' + s + '" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
-        '<path class="logo__c" d="M31 10.5A14 14 0 1 0 31 29.5" stroke="currentColor" stroke-width="5"/>' +
-        '<path class="logo__g" d="M27 15.5A8 8 0 1 0 27 24.5H21" stroke-width="4"/></svg>' +
-        '<span class="logo__text">Campus<br>Gigs</span>';
+      return '<img class="logo__mark logo__mark--light" src="brand/logo.png" width="' + s + '" height="' + s + '" alt="">' +
+        '<img class="logo__mark logo__mark--dark" src="brand/logo-dark.png" width="' + s + '" height="' + s + '" alt="">' +
+        '<span class="logo__text">DiskarTasks</span>';
     }
   };
 

@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About &amp; Contact | Campus Gigs</title>
-  <meta name="description" content="About Campus Gigs, how it works, answers to common questions, and a form to write to the team at SLSU Main Campus.">
+  <title>About &amp; Contact | DiskarTasks</title>
+  <meta name="description" content="About DiskarTasks, how it works, answers to common questions, and a form to write to the team at SLSU Main Campus.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="brand/favicon.png">
+  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -23,8 +25,8 @@
     <div class="container hero-curve__inner">
       <div>
         <p class="eyebrow">About &amp; contact</p>
-        <h1 id="about-title">Made for campus.<br>Made for <span class="about-hero__accent">each other.</span></h1>
-        <p>Campus Gigs connects SLSU students with peers who offer design, tech, writing and tutoring services.</p>
+        <h1 id="about-title">Aral sa Umaga, Diskarte All Day—<span class="about-hero__accent">The Free-Yuyan Way.</span></h1>
+        <p>DiskarTasks connects SLSU students with peers who offer design, tech, writing and tutoring services.</p>
         <div class="hero-curve__actions">
           <a class="btn btn--light" href="browse.html">Browse Gigs</a>
           <a class="btn btn--outline about-hero__ghost" id="about-seller" href="signup.html?role=seller">Become a Seller</a>
@@ -43,13 +45,37 @@
     </div>
   </section>
 
-  <section class="section container about-two">
-    <div><h2 class="h-rule">Our Story</h2><p>Campus Gigs started with a simple idea: SLSU students have incredible skills, and we wanted a place where they can share them, offer their services and support each other.</p></div>
-    <div><h2 class="h-rule">Our Mission</h2><p>To build a trusted and easy-to-use platform that fosters skill-sharing, collaboration and opportunity for every student on campus.</p></div>
+  <section class="section container about-story" aria-labelledby="story-title">
+    <h2 class="h-rule" id="story-title">Our Story</h2>
+    <p>DiskarTasks started with a simple belief: no talented SLSU student should have to hustle in the dark. We’ve seen how hard our Free-Yuyans work, and how discouraging it can be to have so much to offer yet struggle to reach the people who need it most. DiskarTasks is our way of bringing the campus closer together—giving student freelancers a fair chance to be discovered, and building a community where Yuyans genuinely have each other’s backs.</p>
+  </section>
+
+  <section class="section container about-two" aria-label="Mission and vision">
+    <div class="about-two__card"><h2 class="h-rule">Our Mission</h2><p>To empower SLSU students to monetize their skills, build real-world portfolios, and gain practical freelancing experience through a safe, accessible campus marketplace.</p></div>
+    <div class="about-two__card"><h2 class="h-rule">Our Vision</h2><p>To establish a thriving SLSU freelancing ecosystem where every student achieves financial independence, builds a career-ready portfolio, and accesses trusted peer support on demand.</p></div>
+  </section>
+
+  <section class="section container" aria-labelledby="problem-title">
+    <div class="problem">
+      <div>
+        <h2 class="h-rule" id="problem-title">The problem we saw</h2>
+        <p>SLSU students have real skills, yet finding or advertising help usually means scrolling Facebook groups: posts get buried, nobody is verified, there is no order history and no reviews. Word of mouth is trusted but slow, and it is hard to find the right person.</p>
+        <p>Existing freelancing sites are also marketed for adults and working freelancers, which favours people who already built their profiles and leaves most students out.</p>
+      </div>
+      <div>
+        <h2 class="h-rule" id="solution-title">How DiskarTasks answers it</h2>
+        <ul class="solution" aria-labelledby="solution-title">
+          <li><span class="solution__ico" data-ico="shield-check" data-size="22"></span><div><h3>Trust</h3><p>Only SLSU members: sign-up needs an @slsu.edu.ph email.</p></div></li>
+          <li><span class="solution__ico" data-ico="tag" data-size="22"></span><div><h3>Transparency</h3><p>Clear Basic / Standard / Pro packages with price, delivery days, revisions and inclusions.</p></div></li>
+          <li><span class="solution__ico" data-ico="star" data-size="22"></span><div><h3>Proof</h3><p>Portfolios, ratings and reviews on every seller.</p></div></li>
+          <li><span class="solution__ico" data-ico="handshake" data-size="22"></span><div><h3>Convenience</h3><p>In-app chat, order tracking and payment at a campus meet-up.</p></div></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="section container" id="how" aria-labelledby="how-title">
-    <h2 class="h-rule h-rule--center" id="how-title" style="text-align:center;margin-bottom:32px">How Campus Gigs Works</h2>
+    <h2 class="h-rule h-rule--center" id="how-title" style="text-align:center;margin-bottom:32px">How DiskarTasks Works</h2>
     <div class="steps-3 steps-3--icons">
       <div><span class="step-ico" data-ico="search"></span><h3>1. Browse</h3><p>Find the service you need, from logos and websites to tutoring and thesis editing.</p></div>
       <div><span class="step-ico" data-ico="handshake"></span><h3>2. Connect</h3><p>Chat with the seller, agree on the details and place your order in a few taps.</p></div>
@@ -70,8 +96,17 @@
   </section>
 
   <section class="section container" aria-labelledby="who-title">
-    <h2 class="h-rule" id="who-title" style="margin-bottom:16px">Who It's For</h2>
-    <p style="max-width:60ch">Every SLSU student, whether you are looking for help or want to share your skills.</p>
+    <h2 class="h-rule" id="who-title" style="margin-bottom:24px">Who It's For</h2>
+    <div class="audience">
+      <div class="card card--pad"><h3>Student freelancers</h3><p>Turn your skills into a campus gig. Show your work and connect with student clients.</p></div>
+      <div class="card card--pad"><h3>Student buyers</h3><p>Need a logo, tech help, or tutoring? Find student services in one campus marketplace.</p></div>
+      <div class="card card--pad"><h3>Student organisations</h3><p>Find student talent for your next campus project or event.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="values-title">
+    <h2 class="h-rule" id="values-title" style="margin-bottom:24px">Our Core Values</h2>
+    <ul class="values" id="values"></ul>
   </section>
 
   <section class="section container" aria-label="What a student says">
@@ -83,6 +118,12 @@
       <h2 class="h-rule" id="faq-title">Frequently Asked Questions</h2>
       <div class="acc" id="faq-acc"></div>
     </div>
+  </section>
+
+  <section class="section container" id="team" aria-labelledby="team-title">
+    <h2 class="h-rule" id="team-title" style="margin-bottom:8px">Meet the Team</h2>
+    <p class="team-lead">Eight SLSU students built DiskarTasks for the IT Entrepreneurship course (ITE30).</p>
+    <ul class="team" id="team-grid"></ul>
   </section>
 
   <section class="section container contact-wrap" id="contact" aria-labelledby="contact-title">

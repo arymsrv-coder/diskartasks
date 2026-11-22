@@ -176,6 +176,46 @@
   .about-cta .cta-band--card { order: 2; margin: -40px 12px 0; }
 }
 
+/* ---- About: story, problem/solution, audiences, values, team */
+.about-story > * { max-width: 880px; }
+.about-story h2, .problem h2 { margin-bottom: 16px; }
+.about-story p { font-size: 18px; line-height: 30px; }
+.about-two__card { background: var(--olive); border-radius: var(--r24); padding: 32px; }
+.about-two__card:nth-child(2) { background: var(--cream); }
+.problem { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: start; }
+.problem p + p { margin-top: 12px; }
+.solution { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.solution li { display: flex; gap: 14px; align-items: flex-start; }
+.solution__ico { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 50%; background: var(--olive); color: var(--teal); }
+.solution h3 { font-size: 17px; line-height: 24px; }
+.solution p { color: var(--muted); font-size: 15px; }
+.audience { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.audience h3 { font-size: 18px; margin-bottom: 8px; }
+.audience p { color: var(--muted); }
+.values { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.value { background: var(--card); border: 1px solid var(--line); border-radius: var(--r16); padding: 20px 22px; box-shadow: var(--shadow-card); }
+.value__n { display: grid; place-items: center; width: 32px; height: 32px; margin-bottom: 12px; border-radius: 50%; background: var(--green); color: var(--on-green); font: 600 14px/1 var(--font-head); }
+.value h3 { font-size: 18px; line-height: 24px; margin-bottom: 6px; }
+.value p { color: var(--muted); font-size: 15px; line-height: 24px; }
+.team-lead { color: var(--muted); margin-bottom: 28px; }
+.team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.member { background: var(--card); border: 1px solid var(--line); border-radius: var(--r16); padding: 16px; box-shadow: var(--shadow-card); display: flex; flex-direction: column; }
+.member__photo { position: relative; aspect-ratio: 1 / 1; border-radius: var(--r12); overflow: hidden; margin-bottom: 14px; background: var(--olive); }
+.member__photo > .tile { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.member h3 { font-size: 17px; line-height: 24px; }
+.member__role { color: var(--teal); font-weight: 600; font-size: 14px; line-height: 20px; margin-top: 2px; }
+.member__duty { color: var(--muted); font-size: 14px; line-height: 22px; margin-top: 10px; }
+.member__mail { margin-top: auto; padding-top: 12px; font-size: 13px; color: var(--teal); font-weight: 500; overflow-wrap: anywhere; }
+@media (max-width: 1023px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } .values { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+  .problem, .audience, .values { grid-template-columns: 1fr; gap: 24px; }
+  .values { gap: 16px; }
+  .about-two__card { padding: 24px; }
+  .team { gap: 14px; }
+  .member { padding: 12px; }
+}
+@media (max-width: 479px) { .team { grid-template-columns: 1fr; } }
+
 /* ============================================================ Contact (section of the About page) */
 .contact-head { max-width: 60ch; margin-bottom: 32px; }
 .contact-head .eyebrow { margin-bottom: 8px; color: var(--teal); }

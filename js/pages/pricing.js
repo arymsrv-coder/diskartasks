@@ -76,7 +76,7 @@
   UI.accordion($('pricing-faq'));
 
   $('pricing-cta').innerHTML = UI.ctaBand({
-    title: 'The talent your campus needs is ready when you are', text: 'Join Campus Gigs today and connect with fellow SLSU students.',
+    title: 'The talent your campus needs is ready when you are', text: 'Join DiskarTasks today and connect with fellow SLSU students.',
     label: Store.currentUser() ? 'Browse Gigs' : 'Get started for free', href: Store.currentUser() ? 'browse.html' : 'signup.html'
   });
 
